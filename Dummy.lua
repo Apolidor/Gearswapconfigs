@@ -16,7 +16,7 @@ function get_sets()
     sets.precast.FC = {}
 
     --------------------------------------
-    -- Weaponskill sets
+    -- Weaponskill setsg
     --------------------------------------
     -- default set
     sets.precast.WS = {}   
