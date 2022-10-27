@@ -69,8 +69,8 @@ function get_sets()
         waist="Yamabuki-no-Obi",
         left_ear="Friomisi Earring",
         right_ear="Hecate's Earring",
-        left_ring="Stikini Ring",
-        right_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         }
     sets.midcast.Cure = {
         ammo="Quartz Tathlum +1",
@@ -82,7 +82,7 @@ function get_sets()
         neck="Phalaina Locket",
         left_ear="Nourish. Earring +1",
         right_ear="Nourish. Earring",
-        left_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
         right_ring="Naji's Loop",
         }
     

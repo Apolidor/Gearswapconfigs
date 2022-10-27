@@ -28,7 +28,7 @@ function get_sets()
         waist="Lucidity Sash",
         left_ear="Lodurr Earring",
         right_ear="Evans Earring",
-        left_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
         right_ring="Evoker's Ring",
         back={ name="Conveyance Cape", augments={'Summoning magic skill +2','Pet: Enmity+9','Blood Pact Dmg.+2','Blood Pact ab. del. II -2',}},
         }
@@ -206,7 +206,7 @@ function get_sets()
         waist="Lucidity Sash",
         left_ear="Smn. Earring",
         right_ear="Lodurr Earring",
-        left_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
         right_ring="Evoker's Ring",
         back={ name="Conveyance Cape", augments={'Summoning magic skill +2','Pet: Enmity+9','Blood Pact Dmg.+2','Blood Pact ab. del. II -2',}},
         }

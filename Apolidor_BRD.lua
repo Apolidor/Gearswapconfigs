@@ -39,8 +39,8 @@ function get_sets()
         legs="Inyanga Shalwar +2",
         feet="Brioso Slippers +1",
         neck="Moonbow Whistle",
-        left_ring="Stikini Ring",
-        right_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         }
     sets.midcast.songbuff = {
         main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
@@ -50,8 +50,8 @@ function get_sets()
         legs="Inyanga Shalwar +2",
         feet="Brioso Slippers +1",
         neck="Moonbow Whistle",
-        left_ring="Stikini Ring",
-        right_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         }
 
 

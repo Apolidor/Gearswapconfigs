@@ -174,7 +174,7 @@ function get_sets()
         left_ear={ name="Lugra Earring +1", augments={'Path: A',}},
         right_ear="Abyssal Earring",
         left_ring="Kishar Ring",
-        right_ring="Stikini Ring",
+        right_ring="Stikini Ring +1",
         back="Chuparrosa Mantle",
         }
     sets.midcast.Drain = {
@@ -213,7 +213,7 @@ function get_sets()
         waist="Casso Sash",
         left_ear="Abyssal Earring",
         right_ear="Mani Earring",
-        left_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
         right_ring="Evanescence Ring",
         back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +8','"Drain" and "Aspir" potency +22',}}
         }
@@ -230,7 +230,7 @@ function get_sets()
         waist="Eschan Stone",
         left_ear="Friomisi Earring",
         right_ear="Malignance Earring",
-        left_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
         back="Merciful Cape",
         }
@@ -271,8 +271,7 @@ function get_sets()
         left_ear="Malignance Earring",
         right_ear="Mani Earring",
         left_ring="Kishar Ring",
-        right_ring="Stikini Ring",
-        --right_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         back="Chuparrosa Mantle",
         }
     sets.midcast['Stun'] = {   
@@ -292,8 +291,7 @@ function get_sets()
         left_ear="Malignance Earring",
         right_ear="Mani Earring",
         left_ring="Kishar Ring",
-        right_ring="Stikini Ring",
-        --right_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +8','"Drain" and "Aspir" potency +22',}}
         }    
     sets.midcast.Impact = {
@@ -309,8 +307,8 @@ function get_sets()
         waist="Eschan Stone",
         left_ear="Abyssal Earring",
         right_ear="Mani Earring",
-        left_ring="Stikini Ring",
-        right_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +8','"Drain" and "Aspir" potency +22',}}
         }
 

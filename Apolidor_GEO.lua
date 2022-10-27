@@ -53,8 +53,8 @@ function get_sets()
         hands="Geo. Mitaines +1",
         neck="Incanter's Torque",
         left_ear="Gna Earring",
-        left_ring="Stikini Ring",
-        right_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         back={ name="Lifestream Cape", augments={'Geomancy Skill +8','Indi. eff. dur. +15','Pet: Damage taken -3%',}},
         }
     --------------------------------------
@@ -77,8 +77,8 @@ function get_sets()
         waist="Yamabuki-no-Obi",
         left_ear="Bloodgem Earring",
         right_ear="Hecate's Earring",
-        left_ring="Stikini Ring",
-        right_ring="Stikini Ring",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         back="Merciful Cape",
         }
     sets.aftercast.Idle[1]={}

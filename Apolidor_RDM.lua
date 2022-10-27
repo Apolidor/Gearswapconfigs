@@ -110,10 +110,8 @@ function get_sets()
         neck="Incanter's Torque",
         left_ear="Andoaa Earring",
         right_ear="Mimir Earring",
-        left_ring="Stikini Ring",
-        --left_ring="Stikini Ring +1",
-        right_ring="Stikini Ring",
-        --right_ring="Stikini Ring +1",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         back="Sucellos's Cape",
         --back="Ghostfyre Cape",   --Enhancing magic skill +10/Enhancing magic duration +20
         }
@@ -220,8 +218,7 @@ function get_sets()
         --neck="Duelist's torque +2",
         right_ear="Malignance Earring",
         left_ear="Regal Earring",
-        left_ring="Stikini ring",
-        --left_ring="Stikini Ring +1",
+        left_ring="Stikini Ring +1",
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, 
         -- right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, --augment
         back="Sucellos's Cape",
@@ -247,10 +244,8 @@ function get_sets()
         legs="Psycloth Lappas",
         waist="Casso Sash",
         --right_ear="Vor Earring",
-        left_ring="Stikini ring",
-        --left_ring="Stikini Ring +1",
-        right_ring="Stikini ring",
-        --right_ring="Stikini Ring +1",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         })
 
     sets.midcast.Cure = {
@@ -268,10 +263,8 @@ function get_sets()
         waist="Gishdubar Sash",
         -- left_ear="Meili Earring"
         -- right_ear="Beatific Earring"
-        left_ring="Stikini Ring",
-        -- left_ring="Stikini Ring +1",
-        right_ring="Stikini Ring",
-        -- right_ring="Stikini Ring +1",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
         back="Grapevine Cape"
         }
     sets.midcast.refresh = set_combine(sets.midcast.enhancingduration, {
@@ -364,8 +357,8 @@ function get_sets()
         -- hands="Chironic Gloves"
         -- legs="Chironic Hose"
         -- feet="Chironic Slippers",
-        -- left_ring="Stikini Ring +1",
-        -- right_ring="Stikini Ring +1",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
     }
 
     -- weapon_mode        
