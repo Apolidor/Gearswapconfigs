@@ -43,7 +43,7 @@ function get_sets()
     sets.precast.JA = {}
     --sets.precast.JA['ja'] = {}
     sets.precast.FC = {                 --61%   75%
-        -- sub="Sakpata's Sword"           --10%
+        -- sub="Sakpata's Sword"           --10%       gil
         ammo="Sapience Orb",            --2%
         head="Atrophy Chapeau +1",      --12%
         -- head="Atrophy Chapeau +3",      --16%
@@ -69,16 +69,16 @@ function get_sets()
         hands="Jhakri Cuffs +2",
         legs="Nyame Flanchard",
         feet="Lethargy Houseaux +2",
-        -- feet="Nyame Sollerets",
+        -- feet="Nyame Sollerets",      odyssey 
         neck="Fotia Gorget",
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         right_ear="Ishvara Earring",
         left_ring="Rufescent Ring",
-        -- left_ring="Epaminondas Ring",
+        -- left_ring="Epaminondas Ring",       aman    gil     nyzulevent
         right_ring="Karieyh Ring",
         back="Letalis Mantle",
-        -- back="Sucellos's Cape",
+        -- back="Sucellos's Cape",          jse
     }        
     sets.precast['Savage Blade'] = set_combine(sets.precast.WS, {})
     sets.precast['Sanguine Blade'] = set_combine(sets.precast.WS, {})
@@ -98,9 +98,9 @@ function get_sets()
         main="Pukulatmuj +1",
         sub="Secespita",
         ammo="Staunch Tathlum",
-        --ammo="Staunch Tathlum +1",
+        --ammo="Staunch Tathlum +1",        gil
         head="Umuthi Hat",
-        --head="Befouled Crown"
+        --head="Befouled Crown"             vagary  plouton
         body="Vitiation Tabard +3",
         hands="Vitiation Gloves +3",
         legs="Atrophy Tights +1",
@@ -113,7 +113,7 @@ function get_sets()
         left_ring="Stikini Ring +1",
         right_ring="Stikini Ring +1",
         back="Sucellos's Cape",
-        --back="Ghostfyre Cape",   --Enhancing magic skill +10/Enhancing magic duration +20
+        --back="Ghostfyre Cape",   --Enhancing magic skill +10/Enhancing magic duration +20         reive
         }
 
     sets.midcast.enhancingduration  = set_combine(sets.midcast.enhancingskill, {
@@ -124,13 +124,13 @@ function get_sets()
         hands="Atrophy Gloves +2",
         --hands="Atrophy Gloves +3"
         legs="Telchine Braconi",    --+7% Enhancing magic duration  dusk
-        -- legs="Telchine Braconi", --+10% Enhancing magic duration  dusk
+        -- legs="Telchine Braconi", --+10% Enhancing magic duration  dusk       gil
         feet="Lethargy Houseaux +2",
         waist="Embla Sash",
         neck="Duelist's torque +1",
-        --neck="Duelist's torque +2",
+        --neck="Duelist's torque +2",           gil
         right_ear={ name="Lethargy Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+8','Mag. Acc.+8',}},
-        --right_ear="Lethargy Earring +2",
+        --right_ear="Lethargy Earring +2",      sortie
         })
 
     sets.midcast.enhancingdurationother  = set_combine(sets.midcast.enhancingduration, {
@@ -147,27 +147,27 @@ function get_sets()
         -- main="Bunzi's Rod",             --augmented
         sub="Daybreak",
         ammo="Ghastly tathlum +1",
-        -- ammo="Ghastly tathlum +1",       --augmented
+        -- ammo="Ghastly tathlum +1",       --lustreless hide
         head="Lethargy Chappel +2",
         body="Lethargy Sayon +2",
-        -- body="Amalric doublet +1",
+        -- body="Amalric doublet +1",       abjuration  gil
         hands="Lethargy gantherots +2",
-        -- hands="Amalric Gages +1",
+        -- hands="Amalric Gages +1",       abjuration  gil
         legs="Lethargy Fuseau +2",
-        -- legs="Amalric Slops +1",
+        -- legs="Amalric Slops +1",       abjuration  gil
         feet="Leth. Houseaux +2",
-        -- feet="Amalric Nails +1",
+        -- feet="Amalric Nails +1",       abjuration  gil
         neck="Sibyl Scarf",
         waist="Refoccilation Stone",
-        -- waist="Sacro Cord",
+        -- waist="Sacro Cord",          HTNM
         left_ear="Malignance Earring",
         right_ear="Regal Earring",
         left_ring="Locus Ring",
-        -- left_ring="Freke Ring",
+        -- left_ring="Freke Ring",      HTNM
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, 
-        -- right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, --augment
+        -- right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, --lustreless scale
         back="Sucellos's Cape", 
-        -- back="Sucellos's Cape", --augment
+        -- back="Sucellos's Cape", --ambuscade
         }
         
     sets.midcast.burst  = {
@@ -177,27 +177,27 @@ function get_sets()
         ammo="Ghastly tathlum +1",
         -- ammo="Ghastly tathlum +1",       --augmented
         head="Bunzi's Hat",
-        -- head="Ea hat +1",
+        -- head="Ea hat +1",       abjuration  gil
         body="Bunzi's Robe",
-        -- body="Ea Houppe. +1",
+        -- body="Ea Houppe. +1",       abjuration  gil
         hands="Bunzi's Gloves",
-        -- hands="Amalric Gages +1",
+        -- hands="Amalric Gages +1",       abjuration  gil
         legs="Lethargy fuseau +2",
-        -- legs="Ea Slops +1",
+        -- legs="Ea Slops +1",       abjuration  gil
         feet="Bunzi's Sabots",
-        -- feet="Amalric Nails +1",
+        -- feet="Amalric Nails +1",       abjuration  gil
         neck="Sibyl Scarf",
-        -- neck="Mizu. Kubikazari",
+        -- neck="Mizu. Kubikazari",     HTNM
         waist="Refoccilation Stone",
-        -- waist="Sacro Cord",
+        -- waist="Sacro Cord",          HTNM
         left_ear="Malignance Earring",
         right_ear="Friomisi Earring",
-        -- right_ring="Mujin Band",       
+        -- right_ring="Mujin Band",       dynamis   gil
         left_ring="Locus Ring",
-        -- left_ring="Freke Ring",
+        -- left_ring="Freke Ring",      HTNM
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
         back="Sucellos's Cape", 
-        -- back="Sucellos's Cape", --augment
+        -- back="Sucellos's Cape", --ambuscade
         }
 
     sets.midcast.enfeeblingskill  = {
@@ -209,41 +209,41 @@ function get_sets()
         body="Lethargy Sayon +2",
         hands="Lethargy Gantherots +2",
         legs="Chironic hose",
-        -- legs="Chironic hose",       --augment macc
+        -- legs="Chironic hose",       --gil
         feet="Vitiation Boots +1",
         --feet="Vitiation Boots +3",
         waist="Obstinate sash",     
-        -- waist="Obstinate sash",     --augment
+        -- waist="Obstinate sash",     --gil
         neck="Duelist's torque +1",
-        --neck="Duelist's torque +2",
+        --neck="Duelist's torque +2",   gil
         right_ear="Malignance Earring",
         left_ear="Regal Earring",
         left_ring="Stikini Ring +1",
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, 
-        -- right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, --augment
+        -- right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, --lustreless scale
         back="Sucellos's Cape",
-        -- back="Sucellos's Cape",     --augment
+        -- back="Sucellos's Cape",     --ambuscade
         }
 
     sets.midcast.enfeeblingduration  = set_combine(sets.midcast.enfeeblingskill, {
         range="Kaja Bow",
-        --hands="Regal Cuffs"       
+        --hands="Regal Cuffs"           omen ou
         right_ring="Kishar Ring",
         left_ear="Snotra Earring",
-        -- back="Aurist's cape +1",
+        -- back="Aurist's cape +1",     UNM
         })
     
     sets.midcast.enfeeblingaccuracy  = set_combine(sets.midcast.enfeeblingskill, {     
         range="Kaja Bow",
         -- body="Atrophy Tabard +3",
-        -- waist="Acuity belt +1"
-        -- back="Aurist's cape +1",
+        -- waist="Acuity belt +1"       UNM
+        -- back="Aurist's cape +1",     UNM
         })
 
     sets.midcast.enfeeblingskillmax  = set_combine(sets.midcast.enfeeblingskill, {       
         legs="Psycloth Lappas",
         waist="Casso Sash",
-        --right_ear="Vor Earring",
+        --right_ear="Vor Earring",      domain invasion 600
         left_ring="Stikini Ring +1",
         right_ring="Stikini Ring +1",
         })
@@ -252,23 +252,23 @@ function get_sets()
         main="Daybreak",
         sub="Ammurapi Shield",
         ammo="Regal Gem",
-        -- head="Kaykaus Mitra +1"
+        -- head="Kaykaus Mitra +1"       abjuration  gil
         body="Vitiation Tabard +3",
-        -- body="Kaykaus Bliaut +1"
-        -- hands="Kaykaus Cuffs +1"
+        -- body="Kaykaus Bliaut +1"       abjuration  gil
+        -- hands="Kaykaus Cuffs +1"       abjuration  gil
         legs="Atrophy Tights +1",
-        -- legs="Kaykaus Tights +1"
-        -- feet="Kaykaus Boots +1"
+        -- legs="Kaykaus Tights +1"       abjuration  gil
+        -- feet="Kaykaus Boots +1"       abjuration  gil
         neck="Incanter's Torque",
         waist="Gishdubar Sash",
-        -- left_ear="Meili Earring"
-        -- right_ear="Beatific Earring"
+        -- left_ear="Meili Earring"      domain invasion 600
+        -- right_ear="Beatific Earring"     meeble burrows
         left_ring="Stikini Ring +1",
         right_ring="Stikini Ring +1",
         back="Grapevine Cape"
         }
     sets.midcast.refresh = set_combine(sets.midcast.enhancingduration, {
-        -- head="Amalric coif +1",
+        -- head="Amalric coif +1",       abjuration  gil
         body="Atrophy Tabard +2",
         -- body="Atrophy tabard +3",
         legs="Lethargy fuseau +2",
@@ -291,18 +291,18 @@ function get_sets()
         body="Malignance Tabard",
         hands="Malignance Gloves",
         legs="Bunzi's Pants",
-        -- legs="Malignance Tights",
+        -- legs="Malignance Tights",    HTNM
         feet="Nyame Sollerets",
-        -- feet="Malignance Boots",
+        -- feet="Malignance Boots",    HTNM
         neck="Asperity Necklace",
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear="Cessance Earring",
         right_ear="Sherida Earring",
         left_ring="Chirich Ring +1",
-        -- right_ring="Chirich Ring +1",
+        -- right_ring="Chirich Ring +1",    gil
         right_ring="Petrov Ring",
         back="Letalis Mantle",
-        -- back="Sucellos's Cape",
+        -- back="Sucellos's Cape",      ambuscade
         }
 
     sets.aftercast.Idle[1]={    --DT
@@ -311,18 +311,18 @@ function get_sets()
         body="Malignance Tabard",
         hands="Malignance Gloves",
         legs="Bunzi's Pants",
-        -- legs="Malignance Tights",
+        -- legs="Malignance Tights",    HTNM
         feet="Nyame Sollerets",
-        -- feet="Malignance Boots",
+        -- feet="Malignance Boots",    HTNM
         neck="Asperity Necklace",
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear="Cessance Earring",
         right_ear="Sherida Earring",
         left_ring="Chirich Ring +1",
-        -- right_ring="Chirich Ring +1",
+        -- right_ring="Chirich Ring +1",    gil
         right_ring="Defending Ring",
         back="Letalis Mantle",
-        -- back="Sucellos's Cape",
+        -- back="Sucellos's Cape",      ambuscade
         }  
 
     sets.aftercast.Idle[2]={    --Endamage
@@ -330,33 +330,34 @@ function get_sets()
         head="Malignance Chapeau",
         body="Malignance Tabard",
         hands="Malignance Gloves",
-        -- hands="Aya. Manopolas +2"
+        -- hands="Aya. Manopolas +2"    ambuscade
         legs="Bunzi's Pants",
-        -- legs="Malignance Tights",
+        -- legs="Malignance Tights",    HTNM
         feet="Nyame Sollerets",
-        -- feet="Malignance Boots",
+        -- feet="Malignance Boots",    HTNM
         neck="Sibyl Scarf",
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-        -- waist="Hachirin-no-obi"
-        -- waist="Orpheus's Sash"
+        -- waist="Hachirin-no-obi"      farm
+        -- waist="Orpheus's Sash"              aman    gil     nyzulevent
         left_ear="Cessance Earring",
-        -- left_ear="Eabani Earring",
+        -- left_ear="Eabani Earring",       domain invasion 100
         right_ear="Sherida Earring",
         left_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, 
         right_ring="Petrov Ring",
-        -- right_ring="Hetairoi ring"
+        -- right_ring="Hetairoi ring"       reisenjima
         back="Letalis Mantle",
-        -- back="Sucellos's Cape", [DEX +20/Accuracy +30/Attack +20/Dual Wield +10]
+        -- back="Sucellos's Cape", [DEX +20/Accuracy +30/Attack +20/Dual Wield +10]     ambuscade
         }
 
     sets.aftercast.refresh={
-        -- ammo="Homiliary"
+        -- ammo="Homiliary"         quest
         head="Vitiation Chapeau +3",  
         body="Lethargy Sayon +2",
+        -- body="Lethargy Sayon +3",    sortie
         -- body="Jhakri Robe +2 ",
-        -- hands="Chironic Gloves"
-        -- legs="Chironic Hose"
-        -- feet="Chironic Slippers",
+        -- hands="Chironic Gloves"       domain invasion 800
+        -- legs="Chironic Hose"       domain invasion 800
+        -- feet="Chironic Slippers",       domain invasion 800
         left_ring="Stikini Ring +1",
         right_ring="Stikini Ring +1",
     }
@@ -380,6 +381,7 @@ function get_sets()
     sets.aftercast.Weapon[3]={  --endamage
         main={ name="Egeking", augments={'Accuracy+50','Mag. Acc.+30','"Fast Cast"+8',}},
         -- main="Enriching Sword"
+        -- main="Enriching Sword +1"    gil
         -- main="Crocea Mors"
         sub="Pukulatmuj +1",
         -- sub="Crocea Mors"
@@ -463,7 +465,7 @@ function self_command(command)
     if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%2 end
     equip(sets.aftercast.Idle[gear_mode])
 
-    if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%2 end
+    if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%4 end
     equip(sets.aftercast.Weapon[weapon_mode])
     switch_statustext(gear_mode,weapon_mode)
 	switch_crossbar(weapon_mode)	    
@@ -481,6 +483,10 @@ function switch_statustext(gear_mode,weapon_mode)
         weapon_description = "Sword"
     elseif weapon_mode == 1 then
         weapon_description = "Dagger"
+    elseif weapon_mode == 2 then
+        weapon_description = "Endamage 0"
+    elseif weapon_mode == 3 then
+        weapon_description = "Endamage"
     end
     send_command('input //text status text Gear:'..gear_description..' Weapon:'..weapon_description)
 end

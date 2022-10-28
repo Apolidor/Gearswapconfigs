@@ -21,13 +21,13 @@ function get_sets()
     sets.precast.FC = {                     --63%
         ammo="Sapience Orb",                --2%    
 		head={ name="Carmine Mask", augments={'Accuracy+15','Mag. Acc.+10','"Fast Cast"+3',}}, --12%
-		--head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, --14%
+		--head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, --14%       abjuration  gil
 		body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}}, --10%
 		hands="Leyline Gloves",        --5%
-		--hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, --8%
+		--hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, --8%        sinister reign
         legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},  --5%
 		feet="Carmine Greaves +1", --8%
-		--neck="Voltsurge Torque", --4%
+		--neck="Voltsurge Torque", --4%         HTNM
         right_ear="Malignance Earring",     --4%
         left_ear="Loquac. Earring",         --2%
         left_ring="Kishar Ring",            --4%
@@ -48,12 +48,12 @@ function get_sets()
         legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
         feet="Sulev. Leggings +2",
         neck={ name="Abyssal Beads +1", augments={'Path: A',}},
-        --neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+        --neck={ name="Abyssal Beads +2", augments={'Path: A',}},       gil
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear="Thrud Earring",
         right_ear="Ishvara Earring",
         left_ring="Karieyh Ring",
-		--left_ring="Epaminondas's Ring",
+		--left_ring="Epaminondas's Ring",       aman    gil     nyzulevent
         right_ring="Niqmaddu Ring",
         back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},}
     --PDL and Multi
@@ -128,7 +128,7 @@ function get_sets()
         legs="Nyame Flanchard",
         feet="Nyame Sollerets",
         neck="Sibyl scarf",
-        -- waist="Orpheus Sash"
+        -- waist="Orpheus Sash"       aman    gil     nyzulevent
         left_ear="Friomisi Earring",
         right_ear="Malignance Earring",
         right_ring="Metamorph Ring +1",
@@ -161,7 +161,7 @@ function get_sets()
     --------------------------------------
     sets.midcast = {} 
     sets.midcast['Enfeebling Magic']  = { 
-	    -- sub="Khonsu",
+	    -- sub="Khonsu",        ambuscade   pulse
 	    sub="Kaja Grip",
         ammo="Quartz Tathlum +1",
         head="Flam. Zucchetto +2",
@@ -179,36 +179,36 @@ function get_sets()
         }
     sets.midcast.Drain = {
         main="Misanthropy",
-	    -- sub="Khonsu",
-		-- range="Ullr",
+	    -- sub="Khonsu",        ambuscade   pulse
+		-- range="Ullr",        ambuscade   pulse
 		range="Kaja Bow",  
 	    sub="Kaja Grip",
         head={ name="Fallen's Burgeonet", augments={'Enhances "Dark Seal" effect',}},
         -- head={ name="Fallen's Burgeonet +3", augments={'Enhances "Dark Seal" effect',}},
         body={ name="Valorous Mail", augments={'"Drain" and "Aspir" potency +5','CHR+1','Quadruple Attack +2','Accuracy+13 Attack+13',}},
-        -- ???body="Carm. Sc. Mail +1",
+        -- ???body="Carm. Sc. Mail +1",       abjuration  gil
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
 		legs="Fallen's Flanchard +3",
         feet="Ratri Sollerets",
-		-- feet="Ratri Sollerets +1",
+		-- feet="Ratri Sollerets +1",       gil
         neck="Erra Pendant",
 		waist="Austerity belt +1",
         left_ear="Mani Earring",
-        right_ear="Hirudinea Earring",
-		-- right_ear="Malignance Earring",
+        -- right_ear="Hirudinea Earring",
+		right_ear="Malignance Earring",
         left_ring="Excelsis Ring",
-		-- left_ring="Archon Ring",
+		-- left_ring="Archon Ring",     acrch dynamis lord
         right_ring="Evanescence Ring",
         back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +8','"Drain" and "Aspir" potency +22',}}
         }
     sets.midcast.Endark = {
         head="Ig. Burgeonet +3",
         body="Demon's Harness",
-		--body="Carmine Scale Mail +1",
+		--body="Carmine Scale Mail +1",       abjuration  gil
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
 		legs="Heathen's flanchard +2",
         feet="Ratri Sollerets",
-		--feet="Ratri Sollerets +1",
+		--feet="Ratri Sollerets +1",        gil
         neck="Incanter's Torque",
         waist="Casso Sash",
         left_ear="Abyssal Earring",
@@ -218,7 +218,7 @@ function get_sets()
         back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +8','"Drain" and "Aspir" potency +22',}}
         }
     sets.midcast['Elemental Magic'] = {    
-	    -- sub="Khonsu",
+	    -- sub="Khonsu",        ambuscade   pulse
 	    sub="Kaja Grip",
         ammo="Seething Bomblet +1",
         head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
@@ -237,35 +237,35 @@ function get_sets()
     sets.midcast.DreadSpikes = {
         ammo="Egoist's Tathlum",
         head="Ratri Sallet",
-		--head="Ratri Sallet +1",
+		--head="Ratri Sallet +1",       gil
         body="Heathen's Cuirass +2",
         hands="Ratri Gadlings",
-		--hands="Ratri Gadlings +1",
+		--hands="Ratri Gadlings +1",       gil
         legs="Ratri Cuisses",
-		--legs="Ratri Cuisses +1",
+		--legs="Ratri Cuisses +1",       gil
         feet="Ratri Sollerets",
-		--feet="Ratri Sollerets +1",
+		--feet="Ratri Sollerets +1",       gil
         waist="Eschan Stone",
         left_ear="Bloodgem Earring",
-		--left_ear="Odnowa Earring +1",
+		--left_ear="Odnowa Earring +1",     UNM
         right_ear="Cassie Earring",
-		--right_ear="Odnowa Earring",
+		--right_ear="Odnowa Earring",     UNM
         left_ring="Meridian Ring",
         right_ring="Bomb Queen Ring",
-		--right_ring="Gelatinous Ring +1",
+		--right_ring="Gelatinous Ring +1",     UNM
         }
     sets.midcast.Absorb = {   
-	    -- sub="Khonsu",
-		-- range="Ullr",
+	    -- sub="Khonsu",        ambuscade   pulse
+		-- range="Ullr",        ambuscade   pulse
 		range="Kaja Bow",  
 	    sub="Kaja Grip",
         head="Ig. Burgeonet +3",
         body="Nyame mail",
-		--body="Carmine Scale Mail +1",
+		--body="Carmine Scale Mail +1",       abjuration  gil
         hands="Pavor Gauntlets",
         legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
         feet="Ratri Sollerets",
-        --feet="Ratri Sollerets +1",
+        --feet="Ratri Sollerets +1",       gil
         neck="Erra Pendant",
         waist="Eschan Stone",
         left_ear="Malignance Earring",
@@ -275,14 +275,14 @@ function get_sets()
         back="Chuparrosa Mantle",
         }
     sets.midcast['Stun'] = {   
-	    -- sub="Khonsu",
-		-- range="Ullr",
+	    -- sub="Khonsu",        ambuscade   pulse
+		-- range="Ullr",        ambuscade   pulse
 		range="Kaja Bow",  
 	    sub="Kaja Grip",
         head={ name="Carmine Mask", augments={'Accuracy+15','Mag. Acc.+10','"Fast Cast"+3',}},
-		--head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+		--head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},       abjuration  gil
         body="Nyame mail",
-        --body="Carmine Scale Mail +1",
+        --body="Carmine Scale Mail +1",       abjuration  gil
         hands="Nyame Gauntlets",
         legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
         feet="Nyame Sollerets",
@@ -295,8 +295,8 @@ function get_sets()
         back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +8','"Drain" and "Aspir" potency +22',}}
         }    
     sets.midcast.Impact = {
-	    -- sub="Khonsu",
-		-- range="Ullr",
+	    -- sub="Khonsu",        ambuscade   pulse
+		-- range="Ullr",        ambuscade   pulse
 		range="Kaja Bow",  
 	    sub="Kaja Grip",
         body="Twilight Cloak",
@@ -354,12 +354,12 @@ function get_sets()
         ammo="Coiste Bodhar",
         head="Sakpata's Helm",
         neck={"Bathy choker +1"},                                   --11
-        --left_ear="Dignitary's earring",                           --5
+        --left_ear="Dignitary's earring",                           --5         reisenjima
         --right_ear="Schere Earring",                               --3
         left_ear="Cessance Earring",
         right_ear="Brutal Earring",
         body="Flamma Korazin +2",                                   --17
-        --body="Dragon breastplate",                            --(2) 10
+        --body="Dagon breastplate",                             --(2) 10        omen kin
         --body="Sulevia's Plate. +2", DT                            --5
         hands="Sakpata's Gauntlets",                                --8  
         right_ring="Niqmaddu Ring",                             --(2) 5
@@ -417,6 +417,7 @@ function get_sets()
     
     sets.aftercast.Weapon[5]={  --ga
         main="Beheader",
+        -- main="Lycurgos"              ambuscade   pulse
         sub="Utu Grip"
         }
 
