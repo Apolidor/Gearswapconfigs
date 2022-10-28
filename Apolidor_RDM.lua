@@ -379,11 +379,10 @@ function get_sets()
         }     
 
     sets.aftercast.Weapon[3]={  --endamage
-        main={ name="Egeking", augments={'Accuracy+50','Mag. Acc.+30','"Fast Cast"+8',}},
-        -- main="Enriching Sword"
-        -- main="Enriching Sword +1"    gil
+        main="Pukulatmuj +1",
         -- main="Crocea Mors"
-        sub="Pukulatmuj +1",
+        sub="Enriching Sword",
+        -- main="Enriching Sword +1"    gil
         -- sub="Crocea Mors"
         }  
 
