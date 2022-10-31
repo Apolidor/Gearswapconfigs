@@ -230,14 +230,17 @@ function get_sets()
         --hands="Regal Cuffs"           omen ou
         right_ring="Kishar Ring",
         left_ear="Snotra Earring",
-        -- back="Aurist's cape +1",     UNM
+        back="Aurist's cape +1",
+        -- back="Aurist's cape +1", --lustreless hide
         })
     
     sets.midcast.enfeeblingaccuracy  = set_combine(sets.midcast.enfeeblingskill, {     
         range="Kaja Bow",
         -- body="Atrophy Tabard +3",
-        -- waist="Acuity belt +1"       UNM
-        -- back="Aurist's cape +1",     UNM
+        waist="Acuity belt +1",
+        -- waist="Acuity belt +1", --lustreless scale
+        back="Aurist's cape +1",
+        -- back="Aurist's cape +1", --lustreless hide
         })
 
     sets.midcast.enfeeblingskillmax  = set_combine(sets.midcast.enfeeblingskill, {       
