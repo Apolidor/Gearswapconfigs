@@ -11,15 +11,13 @@ function get_sets()
     -- Precast sets
     --------------------------------------
     sets.precast = {}
-    sets.precast.JA = {}
-    --sets.precast.JA['ja'] = {}
+    sets.precast = {}
+    --sets.precast['ws or ja'] = {}
     sets.precast.FC = {}
 
     --------------------------------------
-    -- Weaponskill setsg
+    -- Weaponskill sets
     --------------------------------------
-    -- default set
-    sets.precast.WS = {}   
     --WSD, PDL if ATK-Capped
     sets.precast.WSSingle = {}   
     --PDL and Multi
@@ -33,22 +31,21 @@ function get_sets()
     -- sets.midcast['Enfeebling Magic']  = {}
     -- sets.midcast['Enhancing Magic']  = {}
     -- sets.midcast['Elemental Magic']  = {}
-    --sets.midcast.magic = {}
+    -- sets.midcast.magic = {}
 
     --------------------------------------
     -- Idle/resting/defense/etc sets
     --------------------------------------
     sets.aftercast = {}
     sets.aftercast.Idle = {}
-    sets.aftercast.Weapon = {}  
-    
-    -- gear_mode
+   
     sets.aftercast.Idle[0]={}
     sets.aftercast.Idle[1]={}
 
-    -- weapon_mode        
-    sets.aftercast.Weapon[0]={}       
-    sets.aftercast.Weapon[1]={}    
+    sets.aftercast.Weapon = {}  
+    
+    sets.aftercast.Weapon[0]={}
+    sets.aftercast.Weapon[1]={} 
 
 end
 
@@ -66,17 +63,17 @@ function precast(spell)
 end
 
 function midcast(spell)  
-    if string.find(spell.english,'part of the name') then 
-        equip(sets.midcast.magic)
-    elseif spell.english == 'exact name' then
-        equip(sets.midcast.magic)
+    -- if string.find(spell.english,'part of the name') then 
+    --     equip(sets.midcast.magictypename)
+    -- elseif spell.english == 'exact name' then
+    --     equip(sets.midcast.magicname)
     -- elseif spell.skill == 'Enfeebling Magic' then
     --     equip(sets.midcast['Enfeebling Magic'])
     -- elseif spell.skill == 'Enhancing Magic' then
     --     equip(sets.midcast['Enhancing Magic'])
     -- elseif spell.skill == 'Elemental Magic' then
     --     equip(sets.midcast['Elemental Magic'])
-    elseif spell.skill then
+    -- elseif spell.skill then
         equip(sets.aftercast.Idle)
     end
 end
@@ -86,9 +83,11 @@ function buff_change(name, gain, buff_details)
     -- then
     --     if gain
     --     then
-    --         weapon_mode = 3
-    --     else 
     --         weapon_mode = 1
+    --         gear_mode = 1
+    --     else 
+    --         weapon_mode = 0
+    --         gear_mode = 0
     --     end
     --     equip(set_combine(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode]))	
     --     switch_crossbar(weapon_mode)
@@ -100,23 +99,57 @@ function aftercast(spell)
 	switch_crossbar(weapon_mode)
 end
 
+function status_change(new_status, old_status)
+    --movementspeed  make modular?
+    -- if new_status == 'Idle' then
+    --     equip({legs="Carmine Cuisses +1"})
+    -- elseif
+    --     new_status == 'Engaged' then
+    --     equip(sets.aftercast.Idle[gear_mode])
+    -- end
+end
 -------------------------------------------------------------------------------------------------------------------
 -- Stances
 -------------------------------------------------------------------------------------------------------------------
 function self_command(command)
     if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%1 end
-    if command:lower() == 'gear1' then gear_mode = 0 end
-    if command:lower() == 'gear2' then gear_mode = 1 end
-    if command:lower() == 'gear3' then gear_mode = 2 end
-    if command:lower() == 'gear4' then gear_mode = 3 end
     equip(sets.aftercast.Idle[gear_mode])
 
     if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%1 end
-    if command:lower() == 'weapon1' then weapon_mode = 0 end
-    if command:lower() == 'weapon2' then weapon_mode = 1 end
-    if command:lower() == 'weapon3' then weapon_mode = 2 end
-    if command:lower() == 'weapon4' then weapon_mode = 3 end
     equip(sets.aftercast.Weapon[weapon_mode])
+    switch_statustext(gear_mode,weapon_mode)
 	switch_crossbar(weapon_mode)	    
     
+end
+
+function switch_statustext(gear_mode,weapon_mode)
+    -- geardescription
+    if gear_mode == 0 then
+        gear_description = "TP-Build_____"
+    elseif gear_mode == 1 then
+        gear_description = "DamageTaken__"
+    end
+
+    if weapon_mode == 0 then
+        weapon_description = "mainweaponset"
+    elseif weapon_mode == 1 then
+        weapon_description = "subweaponset"
+    end
+    send_command('input //text status text Gear:'..gear_description..' Weapon:'..weapon_description)
+end
+function switch_crossbar(mode)
+
+    -- if mode == 0 then
+    --     send_command('input //xivcrossbar set job-default 2 6 ws "Frostbite" t "Frostbite"')
+    --     send_command('input //xivcrossbar set job-default 2 7 ws "Torcleaver" t "Torcleaver"')
+    --     send_command('input //xivcrossbar set job-default 2 8 ws "Shockwave" t "Shockwave"')
+    --     send_command('input //xivcrossbar set job-default 2 5 ws "Resolution" t "Resolution"')
+    -- end
+
+	-- if mode == 1 or mode == 99 then
+    --     send_command('input //xivcrossbar set job-default 2 6 ws "Catastrophe" t "Catastrophe"')
+    --     send_command('input //xivcrossbar set job-default 2 7 ws "Cross Reaper" t "Cross Reaper"')
+    --     send_command('input //xivcrossbar set job-default 2 8 ws "Entropy" t "Entropy"')
+    --     send_command('input //xivcrossbar set job-default 2 5 ws "Insurgency" t "Insurgency"')
+    -- end
 end
