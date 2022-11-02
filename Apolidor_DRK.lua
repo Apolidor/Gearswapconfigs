@@ -13,7 +13,7 @@ function get_sets()
     sets.precast = {}
     sets.precast.JA = {}
 	sets.precast.JA['Arcane Circle'] = {feet="Ignominy Sollerets +3"}
-    sets.precast.JA['Nether Void'] = {legs="Heath. Flanchard +2"}
+    sets.precast.JA['Nether Void'] = {legs="Heath. Flanchard +2"} -- legs="Heath. Flanchard +3" sortie
     sets.precast.JA['Last Resort'] = {feet="Fallen's sollerets",back="Ankou's Mantle"}
     sets.precast.JA['Weapon Bash'] = {hands="Ig. Gauntlets +3"} 
     sets.precast.JA['Dark Seal'] = {head={ name="Fallen's Burgeonet", augments={'Enhances "Dark Seal" effect',}}}  
