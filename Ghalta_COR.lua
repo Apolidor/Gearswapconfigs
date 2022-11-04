@@ -16,7 +16,9 @@ function get_sets()
     sets.precast.PhantomRoll = {
         range={ name="Compensator", augments={'DMG:+15','AGI+15','Rng.Acc.+15',}},
         head={ name="Lanun Tricorne", augments={'Enhances "Winning Streak" effect',}},
-        right_ring="Barataria Ring",
+        right_ring="Barataria Ring",        
+        neck="Regal necklace"
+        back={ name="Camulus's Mantle", augments={'"Dbl.Atk."+10',}},
     }
     sets.precast.Fold = {hands="Lanun Gants +3"}
     sets.precast.FC = {}
@@ -25,10 +27,15 @@ function get_sets()
     -- Weaponskill sets
     --------------------------------------
     --WSD, PDL if ATK-Capped
-    sets.precast.WSSingle = {}   
+    sets.precast.WSSingle = {
+        back={ name="Camulus's Mantle", augments={'Weapon skill damage +10%',}},
+    }   
     --PDL and Multi
-    sets.precast.WSMulti = {}  
-    --sets.precast.WS['ws'] = set_combine(sets.precast.WSSingle, {})
+    sets.precast.WSMulti = {
+        back={ name="Camulus's Mantle", augments={'Weapon skill damage +10%',}},
+    }  
+    --sets.precast.['ws'] = set_combine(sets.precast.WSSingle, {})
+    sets.precast['Last Stand'] = set_combine(sets.precast.WSSingle,{})
 
     --------------------------------------
     -- Midcast sets
@@ -46,29 +53,33 @@ function get_sets()
     sets.aftercast.Idle = {}
    
     sets.aftercast.Idle[0]={
-        head={ name="Lanun Tricorne", augments={'Enhances "Winning Streak" effect',}},
+        head="Mummu Bonnet +1",
         body="Nisroch Jerkin",
-        hands="Espial Bracers",
-        legs="Espial Hose",
-        feet="Espial Socks",
+        hands="Mummu Wrists +1",
+        legs="Mummu Kecks +1",
+        feet="Mummu Gamash. +1",
         neck="Iqabi Necklace",
         waist="Dynamic Belt",
         left_ear="Mache Earring",
         right_ear="Mache Earring",
-        left_ring="Warp Ring",
+        left_ring="Mummu Ring",
         right_ring="Barataria Ring",
-        back="Nexus Cape",
-    }
+        back={ name="Camulus's Mantle", augments={'"Dbl.Atk."+10',}},
+        }
     sets.aftercast.Idle[1]={}
 
     sets.aftercast.Weapon = {}  
     
-    sets.aftercast.Weapon[0]={
+    sets.aftercast.Weapon[0]={ 
+        main="Tokko Sword",
+        range={ name="Compensator", augments={'DMG:+15','AGI+15','Rng.Acc.+15',}},
+        ammo="Eminent Bullet",
+        }
+    sets.aftercast.Weapon[1]={
         main="Surcouf's Jambiya",
         range={ name="Compensator", augments={'DMG:+15','AGI+15','Rng.Acc.+15',}},
-        ammo="Bullet",
-    }
-    sets.aftercast.Weapon[1]={} 
+        ammo="Eminent Bullet",
+        } 
 
 end
 
@@ -158,9 +169,9 @@ function switch_statustext(gear_mode,weapon_mode)
     end
 
     if weapon_mode == 0 then
-        weapon_description = "mainweaponset"
+        weapon_description = "Sword"
     elseif weapon_mode == 1 then
-        weapon_description = "subweaponset"
+        weapon_description = "Range"
     end
     send_command('input //text status text Gear:'..gear_description..' Weapon:'..weapon_description)
 end

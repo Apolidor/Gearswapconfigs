@@ -180,8 +180,7 @@ function get_sets()
     sets.midcast.Drain = {
         main="Misanthropy",
 	    -- sub="Khonsu",        ambuscade   pulse
-		-- range="Ullr",        ambuscade   pulse
-		range="Kaja Bow",  
+		range="Ullr", 
 	    sub="Kaja Grip",
         head={ name="Fallen's Burgeonet", augments={'Enhances "Dark Seal" effect',}},
         -- head={ name="Fallen's Burgeonet +3", augments={'Enhances "Dark Seal" effect',}},
@@ -256,8 +255,7 @@ function get_sets()
         }
     sets.midcast.Absorb = {   
 	    -- sub="Khonsu",        ambuscade   pulse
-		-- range="Ullr",        ambuscade   pulse
-		range="Kaja Bow",  
+		range="Ullr",
 	    sub="Kaja Grip",
         head="Ig. Burgeonet +3",
         body="Nyame mail",
@@ -276,8 +274,7 @@ function get_sets()
         }
     sets.midcast['Stun'] = {   
 	    -- sub="Khonsu",        ambuscade   pulse
-		-- range="Ullr",        ambuscade   pulse
-		range="Kaja Bow",  
+		range="Ullr",
 	    sub="Kaja Grip",
         head={ name="Carmine Mask", augments={'Accuracy+15','Mag. Acc.+10','"Fast Cast"+3',}},
 		--head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},       abjuration  gil
@@ -296,8 +293,7 @@ function get_sets()
         }    
     sets.midcast.Impact = {
 	    -- sub="Khonsu",        ambuscade   pulse
-		-- range="Ullr",        ambuscade   pulse
-		range="Kaja Bow",  
+		range="Ullr",
 	    sub="Kaja Grip",
         body="Twilight Cloak",
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},

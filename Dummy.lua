@@ -22,7 +22,7 @@ function get_sets()
     sets.precast.WSSingle = {}   
     --PDL and Multi
     sets.precast.WSMulti = {}  
-    --sets.precast.WS['ws'] = set_combine(sets.precast.WSSingle, {})
+    --sets.precast.['ws'] = set_combine(sets.precast.WSSingle, {})
 
     --------------------------------------
     -- Midcast sets

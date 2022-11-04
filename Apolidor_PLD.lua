@@ -140,6 +140,7 @@ function get_sets()
         legs="Sakpata's Cuisses",
         }
     sets.midcast.Enhancing = {}
+    sets.midcast['Flash'] = {} 
     -- sets.midcast['Enfeebling Magic']  = {}
     -- sets.midcast['Enhancing Magic']  = {}
     -- sets.midcast['Elemental Magic']  = {}
