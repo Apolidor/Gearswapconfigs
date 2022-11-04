@@ -17,7 +17,7 @@ function get_sets()
         range={ name="Compensator", augments={'DMG:+15','AGI+15','Rng.Acc.+15',}},
         head={ name="Lanun Tricorne", augments={'Enhances "Winning Streak" effect',}},
         right_ring="Barataria Ring",        
-        neck="Regal necklace"
+        neck="Regal necklace",
         back={ name="Camulus's Mantle", augments={'"Dbl.Atk."+10',}},
     }
     sets.precast.Fold = {hands="Lanun Gants +3"}
