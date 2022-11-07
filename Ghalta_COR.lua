@@ -16,6 +16,7 @@ function get_sets()
     sets.precast.PhantomRoll = {
         range={ name="Compensator", augments={'DMG:+15','AGI+15','Rng.Acc.+15',}},
         head={ name="Lanun Tricorne", augments={'Enhances "Winning Streak" effect',}},
+        hands="Navarch's gants +1"
         right_ring="Barataria Ring",        
         neck="Regal necklace",
         back={ name="Camulus's Mantle", augments={'"Dbl.Atk."+10',}},
