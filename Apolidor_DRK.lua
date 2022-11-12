@@ -46,7 +46,8 @@ function get_sets()
         body="Ignominy Cuirass +3",
         hands="Sakpata's Gauntlets",
         legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
-        feet="Sulev. Leggings +2",
+        feet="Heathen's sollerets +2",
+        -- feet="Heathen's sollerets +3",   sortie
         neck={ name="Abyssal Beads +1", augments={'Path: A',}},
         --neck={ name="Abyssal Beads +2", augments={'Path: A',}},       gil
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
