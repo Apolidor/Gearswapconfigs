@@ -207,6 +207,7 @@ function get_sets()
 		--body="Carmine Scale Mail +1",       abjuration  gil
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
 		legs="Heathen's flanchard +2",
+		-- legs="Heathen's flanchard +3",   sortie
         feet="Ratri Sollerets",
 		--feet="Ratri Sollerets +1",        gil
         neck="Incanter's Torque",
@@ -225,7 +226,8 @@ function get_sets()
         body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
         legs="Nyame Flanchard",
-        feet="Nyame Sollerets",
+        feet="Heathen's sollerets +2",
+        -- feet="Heathen's sollerets +3",   sortie
         neck="Stoicheion Medal",
         waist="Eschan Stone",
         left_ear="Friomisi Earring",
@@ -239,6 +241,7 @@ function get_sets()
         head="Ratri Sallet",
 		--head="Ratri Sallet +1",       gil
         body="Heathen's Cuirass +2",
+        -- body="Heathen's Cuirass +3",     sortie
         hands="Ratri Gadlings",
 		--hands="Ratri Gadlings +1",       gil
         legs="Ratri Cuisses",
@@ -299,7 +302,8 @@ function get_sets()
         body="Twilight Cloak",
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
         legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},
-        feet="Heath. Sollerets +1",
+        feet="Heathen's sollerets +2",
+        -- feet="Heathen's sollerets +3",   sortie
         neck="Erra Pendant",
         waist="Eschan Stone",
         left_ear="Abyssal Earring",
