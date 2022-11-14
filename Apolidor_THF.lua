@@ -21,23 +21,70 @@ function get_sets()
     -- Weaponskill sets
     --------------------------------------
     -- default set
-    sets.precast.WS = {
-        ammo="Aurgelmir Orb",
-        head="Meghanada Visor +1",
-        body="Meghanada Cuirie",
-        hands="Meg. Gloves +1",
-        legs={ name="Herculean Trousers", augments={'Accuracy+30','Weapon skill damage +2%','DEX+13',}},
-        feet="Meg. Jam. +1",
+    sets.precast.WSMSingle = {
+        ammo="Seeth. Bomblet +1",
+        -- ammo="Seeth. Bomblet +1",       --lustreless hide
+        head={ name="Nyame Helm", augments={'Path: B',}},
+        body={ name="Nyame Mail", augments={'Path: B',}},
+        -- body="Skulker's vest +3"     sortie
+        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        legs={ name="Nyame Flanchard", augments={'Path: B',}},
+        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        neck="Asperity Necklace",
+        -- neck="Assassin's gorget +2", gil
+        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+        right_ear="Ishvara Earring",
+        left_ring="Karieyh Ring",
+        -- left_ring="Epaminondas's ring",      gil
+        right_ring="Regal Ring",
+        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        back={ name="Canny Cape", augments={'DEX+3','AGI+1','"Dual Wield"+3','Crit. hit damage +1%',}},  
+        -- back="Toutatis's cape"       ambuscade       DEX +30, Acc/Atk +20 WSD +10
+        }  
+    sets.precast.WSMulti = {
+        ammo="Seeth. Bomblet +1",
+        -- ammo="Seeth. Bomblet +1",       --lustreless hide
+        head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
+        -- head={ name="Adhemar Bonnet +1", augments={'DEX+10','AGI+10','Accuracy+15',}},       gil
+        body={ name="Herculean Vest", augments={'Accuracy+14','"Triple Atk."+4','Attack+15',}},
+        hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+        -- hands={ name="Adhemar Wristbands +1", augments={'DEX+10','AGI+10','Accuracy+15',}},  gil   
+        legs="Meg. Chausses +1",
+        -- legs="Meg. Chausses +2",             ambuscade
+        feet={ name="Herculean Boots", augments={'Accuracy+25 Attack+25','Crit.hit rate+3','STR+6','Accuracy+12','Attack+11',}},
         neck="Fotia Gorget",
         waist="Fotia Belt",
         left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
-        right_ear="Ishvara Earring",
-        left_ring="Rajas Ring",
-        right_ring="Petrov Ring",
-        back={ name="Canny Cape", augments={'DEX+3','AGI+1','"Dual Wield"+3','Crit. hit damage +1%',}},     
-        }        
-    sets.precast['Evisceration'] = set_combine(sets.precast.WS, {})
-    sets.precast['Exenterator'] = set_combine(sets.precast.WS, {})
+        right_ear="Sherida Earring",
+        left_ring="Regal Ring",
+        right_ring="Apate Ring",
+        back={ name="Canny Cape", augments={'DEX+3','AGI+1','"Dual Wield"+3','Crit. hit damage +1%',}},  
+        -- back="Toutatis's cape"       ambuscade       AGI +30, Acc/Atk +20 DA +10
+        }  
+    --fivefold(crit)    dex50           1,25    1,25    1,25        ftp-replicating     
+    sets.precast['Evisceration'] = set_combine(sets.precast.WSMulti, {
+        ammo="Yetshila",
+        -- ammo="Yetshila +1",              gil
+        -- body="Plunderer's vest +3",      dynamis
+        -- legs="Pillager's culottes +3",   omen
+        -- feet="Adhemar gamashes +1",      gil
+        -- back="Toutatis's cape"       ambuscade       DEX +30, Acc/Atk +20 Crit +10
+        })
+    --fourfold          agi75           1,0     1,0     1,0         ftp-replicating
+    sets.precast['Exenterator'] = set_combine(sets.precast.WSMulti, {})
+    --single(magic)     dex40,int40     2,0     3,0     4,5         
+    sets.precast['Aeolian Edge'] = set_combine(sets.precast.WSSingle, {
+        body={ name="Nyame Mail", augments={'Path: B',}},
+        neck="Sibyl Scarf",
+        right_ear="Friomisi Earring",
+        right_ring="Dingir Ring",
+        -- waist="Orpheus Sash"         gil
+        -- back="Toutatis's cape"       ambuscade       INT +30, Macc/MDmg +20, WSD +10%
+    })
+    --single            dex80           5,0     10,19   13         
+    sets.precast['Rudra\'s Storm'] = set_combine(sets.precast.WSSingle, {})
+
 
     --------------------------------------
     -- Midcast sets
@@ -57,19 +104,30 @@ function get_sets()
     
     -- gear_mode
     sets.aftercast.Idle[0]={    --TP
-        ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+        ammo="Aurgelmir Orb",
+        -- ammo="Aurgelmir Orb +1,      gil
         head="Gleti's Mask",
+        -- head="Skulker's bonnet +3",  sortie
         body="Gleti's Cuirass",
+        -- body="Pillager's vest +3",   omen
         hands="Gleti's Gauntlets",
-        legs="Gleti's Breeches",
+        -- hands="Gleti's Gauntlets",   sheol
+        legs="Samnuha tights",
+        -- legs="Malignance tights",    HTNM
         feet={ name="Herculean Boots", augments={'Accuracy+25 Attack+25','Crit.hit rate+3','STR+6','Accuracy+12','Attack+11',}},
+        -- feet="Plunderer's poulaines +3"      dynamis
         neck="Asperity Necklace",
+        -- neck="Assassin's gorget +2", gil
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        -- waist="Reiki yotai",         reisenjima
         left_ear="Sherida Earring",
-        right_ear="Cessance Earring",
+        right_ear="Skulker's earring",
+        -- right_ear="Skulker's earring +2",    sortie
         left_ring="Rajas Ring",
+        -- left_ring="Gere Ring",       woe
         right_ring="Chirich Ring +1",
         back={ name="Canny Cape", augments={'DEX+3','AGI+1','"Dual Wield"+3','Crit. hit damage +1%',}},
+        -- back="Toutatis's cape"       ambuscade       DEX +30, Acc +20, Atk +20, STP +10
         }
         
     sets.aftercast.Idle[1]= set_combine(sets.aftercast.Idle[0],{     --Treasure Hunter
@@ -82,7 +140,8 @@ function get_sets()
     -- weapon_mode        
     sets.aftercast.Weapon[0]={
         main="Crepuscular knife";
-        sub={ name="Shijo", augments={'DMG:+15','Accuracy+15','Attack+15',}},
+        sub="Gleti' Knife"
+        -- sub="Gleti' Knife"           sheol(ngai)   augment
     }       
     sets.aftercast.Weapon[1]={
         main="Crepuscular knife";
@@ -91,6 +150,7 @@ function get_sets()
     sets.aftercast.Weapon[2]={
         main="Naegling";
         sub={ name="Shijo", augments={'DMG:+15','Accuracy+15','Attack+15',}},
+        -- sub=""  1000tp
     }    
 
 end
