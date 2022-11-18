@@ -11,7 +11,6 @@ function get_sets()
     -- Precast sets
     --------------------------------------
     sets.precast = {}
-    sets.precast = {}
     --sets.precast['ws or ja'] = {}
     sets.precast.FC = {}
 

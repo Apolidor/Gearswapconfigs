@@ -14,8 +14,7 @@ function get_sets()
     -- Precast sets
     --------------------------------------
     sets.precast = {}
-    sets.precast.JA = {}
-    --sets.precast.JA['ja'] = {}
+    --sets.precast['ws or ja'] = {}
     sets.precast.FC = {                 --49%
         main="Marin Staff +1",          --3%
         sub="Clerisy Strap",            --2%
@@ -35,9 +34,11 @@ function get_sets()
     --------------------------------------
     -- Weaponskill sets
     --------------------------------------
-    -- default set
-    sets.precast.WS = {}        
-    --sets.precast.WS['ws'] = set_combine(sets.precast.WS, {})
+    --WSD, PDL if ATK-Capped
+    sets.precast.WSSingle = {}   
+    --PDL and Multi
+    sets.precast.WSMulti = {}  
+    --sets.precast.['ws'] = set_combine(sets.precast.WSSingle, {})
 
     --------------------------------------
     -- Midcast sets
@@ -68,11 +69,10 @@ function get_sets()
     -- Idle/resting/defense/etc sets
     --------------------------------------
     sets.aftercast = {}
-    sets.aftercast.Idle = {}
-    sets.aftercast.Weapon = {}  
+    sets.aftercast.Idle = {} 
     
     -- gear_mode
-    sets.aftercast.Idle[0]={    --refresh
+    sets.aftercast.Idle[0]={    --refresh/mab
         main={ name="Lathi", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
         sub="Elan Strap +1",
         ammo="Floestone",
@@ -90,7 +90,25 @@ function get_sets()
         back="Mecistopins mantle"
         --back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+5',}},
         }
-    sets.aftercast.Idle[1]={
+    sets.aftercast.Idle[1]={    --refresh/macc
+        main={ name="Lathi", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
+        sub="Elan Strap +1",
+        ammo="Floestone",
+        head={ name="Merlinic Hood", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Occult Acumen"+9','INT+6','"Mag.Atk.Bns."+4',}},
+        body="Vrikodara jupon",
+        hands="Jhakri Cuffs +2",
+        legs={ name="Assid. Pants +1", augments={'Path: A',}},
+        feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Mag. crit. hit dmg. +9%','INT+15','Mag. Acc.+15',}},
+        neck="Saevus Pendant +1",
+        waist="Austerity Belt +1",
+        left_ear="Malignance earring",
+        right_ear="Friomisi Earring",
+        left_ring="Karieyh Ring",
+        right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+        back="Mecistopins mantle"
+        --back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+5',}},
+        }
+    sets.aftercast.Idle[2]={    --dt/burst
         main={ name="Lathi", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
         sub="Elan Strap +1",
         ammo="Floestone",
@@ -106,9 +124,10 @@ function get_sets()
         left_ring="Karieyh Ring",
         right_ring="Defending Ring",
         back={ name="Mecisto. Mantle", augments={'Cap. Point+47%','MND+2','DEF+8',}},
-    }
+        }
 
     -- weapon_mode        
+    sets.aftercast.Weapon = {} 
     sets.aftercast.Weapon[0]={}       
     sets.aftercast.Weapon[1]={}    
 
@@ -130,37 +149,61 @@ end
 function midcast(spell) 
     -- Magic-Boost   
     -- if string.find(spell.english,'part of the name') then 
-    --     equip(sets.midcast.magic)
+    --     equip(sets.midcast.magictypename)
     -- elseif spell.english == 'exact name' then
-    --     equip(sets.midcast.magic)
+    --     equip(sets.midcast.magicname)
     -- elseif spell.skill == 'Enfeebling Magic' then
     --     equip(sets.midcast['Enfeebling Magic'])
     -- elseif spell.skill == 'Enhancing Magic' then
     --     equip(sets.midcast['Enhancing Magic'])
     if spell.skill == 'Elemental Magic' then
         equip(sets.midcast['Elemental Magic'])
-    -- elseif spell.skill then
-    --     equip(sets.aftercast.Idle)
+    elseif spell.skill then
+        equip(sets.aftercast.Idle)
     end
 end
 
-function aftercast(spell)
-        equip(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode])
+function buff_change(name, gain, buff_details)
+    -- if name == '<buffname>'
+    -- then
+    --     if gain
+    --     then
+    --         weapon_mode = 1
+    --         gear_mode = 1
+    --     else 
+    --         weapon_mode = 0
+    --         gear_mode = 0
+    --     end
+    --     equip(set_combine(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode]))	
+    --     switch_crossbar(weapon_mode)
+    -- end
 end
 
+function aftercast(spell)
+    equip(set_combine(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode]))	
+	switch_crossbar(weapon_mode)
+end
+
+function status_change(new_status, old_status)
+    --movementspeed  make modular?
+    -- if new_status == 'Idle' then
+    --     equip({legs="Carmine Cuisses +1"})
+    -- elseif
+    --     new_status == 'Engaged' then
+    --     equip(sets.aftercast.Idle[gear_mode])
+    -- end
+end
 -------------------------------------------------------------------------------------------------------------------
 -- Stances
 -------------------------------------------------------------------------------------------------------------------
 function self_command(command)
-    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%2 end
-    if command:lower() == 'gear1' then gear_mode = 0 end
-    if command:lower() == 'gear2' then gear_mode = 1 end
+    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%3 end
     equip(sets.aftercast.Idle[gear_mode])
 
-    if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%2 end
-    if command:lower() == 'weapon1' then weapon_mode = 0 end
-    if command:lower() == 'weapon2' then weapon_mode = 1 end
+    if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%1 end
     equip(sets.aftercast.Weapon[weapon_mode])
+    switch_statustext(gear_mode,weapon_mode)
+	switch_crossbar(weapon_mode)	    
 
     if command:lower() == 'switchelement' then 
         if dle_stance == 1 then
@@ -303,3 +346,38 @@ function self_command(command)
         send_command('input //xivcrossbar set default 2 8 ja "Addendum: White" me "Addendum: White"')     
     end
 end
+
+function switch_statustext(gear_mode,weapon_mode)
+    -- geardescription
+    if gear_mode == 0 then
+        gear_description = "MAB/Refresh__"
+    elseif gear_mode == 1 then
+        gear_description = "MAcc/Refresh_"  
+    elseif gear_mode == 2 then
+        gear_description = "Burst/DT_____"  
+    end
+
+        if weapon_mode == 0 then
+            weapon_description = "Staff"
+        elseif weapon_mode == 1 then
+            weapon_description = "subweaponset"
+        end
+        send_command('input //text status text Gear:'..gear_description..' Weapon:'..weapon_description)
+    end
+    function switch_crossbar(mode)
+    
+        -- if mode == 0 then
+        --     send_command('input //xivcrossbar set job-default 2 6 ws "Frostbite" t "Frostbite"')
+        --     send_command('input //xivcrossbar set job-default 2 7 ws "Torcleaver" t "Torcleaver"')
+        --     send_command('input //xivcrossbar set job-default 2 8 ws "Shockwave" t "Shockwave"')
+        --     send_command('input //xivcrossbar set job-default 2 5 ws "Resolution" t "Resolution"')
+        -- end
+    
+        -- if mode == 1 or mode == 99 then
+        --     send_command('input //xivcrossbar set job-default 2 6 ws "Catastrophe" t "Catastrophe"')
+        --     send_command('input //xivcrossbar set job-default 2 7 ws "Cross Reaper" t "Cross Reaper"')
+        --     send_command('input //xivcrossbar set job-default 2 8 ws "Entropy" t "Entropy"')
+        --     send_command('input //xivcrossbar set job-default 2 5 ws "Insurgency" t "Insurgency"')
+        -- end
+    end
+    

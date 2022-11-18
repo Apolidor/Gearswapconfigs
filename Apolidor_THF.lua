@@ -140,7 +140,7 @@ function get_sets()
     -- weapon_mode        
     sets.aftercast.Weapon[0]={
         main="Crepuscular knife";
-        sub="Gleti' Knife"
+        sub="Gleti's Knife"
         -- sub="Gleti' Knife"           sheol(ngai)   augment
     }       
     sets.aftercast.Weapon[1]={
