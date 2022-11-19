@@ -15,20 +15,32 @@ function get_sets()
     --------------------------------------
     sets.precast = {}
     --sets.precast['ws or ja'] = {}
-    sets.precast.FC = {                 --49%
-        main="Marin Staff +1",          --3%
+    sets.precast.FC = {                 --63%   +8% on elemental(jobpoints)
+        main="Mpaca's Staff",           --5%
+        -- main="Oranyan",              --7%        reisenjima(schah)
+        -- main="Hvergelmir",           --50%       empy
         sub="Clerisy Strap",            --2%
+        -- sub="Clerisy Strap +1",      --3%
         ammo="Sapience Orb",            --2%
         head={ name="Merlinic Hood", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Occult Acumen"+9','INT+6','"Mag.Atk.Bns."+4',}},  --8%
-        body={ name="Merlinic Jubbah", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+3','"Mag.Atk.Bns."+11',}},           --6%
-        hands="Repartie Gloves",        --2%
-        legs={ name="Psycloth Lappas", augments={'MP+80','Mag. Acc.+15','"Fast Cast"+7',}},                                         --7%
+        -- head="Amalric coif +1"          --11%       gil
+        body={ name="Merlinic Jubbah", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+3','"Mag.Atk.Bns."+11',}},           --9%
+        -- body="Zendik robe"              --13%       escha(woc)
+        hands="Agwu's Gages",           --6%
+        legs="Agwu's slops",             --7%
         feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Mag. crit. hit dmg. +9%','INT+15','Mag. Acc.+15',}},        --5%
+        -- feet="Amalric Nails +1"         --6%        gil
         neck="Stoicheion Medal",        --3% elem.
+        -- neck="Voltsurge torque"      --4%        HTNM
+        -- neck="Orunmila's Torque"     --5%        meeble
+        waist="Embla Sash",             --5%
         right_ear="Malignance Earring", --4%
         left_ear="Loquac. Earring",     --2%
         left_ring="Kishar Ring",        --4%
         right_ring="Naji's Loop",       --1%
+        -- right_ring="Rahab Ring",        --2%        Escha(AA TT)
+        -- back="Swith Cape +1 "           --4%        gil
+        -- back="Taranus's Cape "          --10%       ambuscade
         }
 
     --------------------------------------
@@ -39,31 +51,134 @@ function get_sets()
     --PDL and Multi
     sets.precast.WSMulti = {}  
     --sets.precast.['ws'] = set_combine(sets.precast.WSSingle, {})
+    --maxMP
+    sets.precast['Myrkr'] = {
+        ammo="Strobilus",
+        head="Amanita Hairpin",
+        -- head="Pixie Hairpin +1"      gil
+        -- head="Kaabnax Hat"           wildskeeper
+        body={ name="Nyame Mail", augments={'Path: B',}},
+        -- body="Ros. Jaseran +1"       unm
+        -- body="Amalric doublet +1",   gil
+        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        -- hands="Otomi gloves",           wildskeeper
+        legs="Psycloth lappas",
+        -- legs="Spae. Tonban +3",      omen
+        -- legs="Amalric slops +1",     gil
+        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        -- feet="Psycloth boots",       escha(gestalt)
+        neck="Dualism collar +1",
+        waist="Acuity Belt +1",
+        -- waist="Shinjutsu-no-Obi +1", unm
+        left_ear="Evans Earring",
+        -- left_ear="Nehalennia Earring",   zurim
+        right_ear="Halasz Earring",
+        -- right_ear="Influx earring",  sparks
+        left_ring="Bifrost Ring",
+        -- left_ring="Mephitas's Ring", unm
+        right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+        -- right_ring="Mephitas's Ring +1", unm
+        back="Aurist's Cape +1",
+        -- back="Bane cape",            jse
+        }
 
     --------------------------------------
     -- Midcast sets
     --------------------------------------
     sets.midcast = {}
-    -- sets.midcast['Enfeebling Magic']  = {}
-    -- sets.midcast['Enhancing Magic']  = {}
-    sets.midcast['Elemental Magic']  = {  
-        main={ name="Lathi", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-        sub="Elan Strap +1",
-        ammo="Floestone",
-        head={ name="Merlinic Hood", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Occult Acumen"+9','INT+6','"Mag.Atk.Bns."+4',}},
-        body={ name="Merlinic Jubbah", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+3','"Mag.Atk.Bns."+11',}},
+    sets.midcast.enfeebling  = {
+        main={ name="Bunzi's Rod", augments={'Path: A',}},
+        sub="Ammurapi Shield",
+        ammo="Quartz Tathlum +1",
+        -- ammo="Pemphredo Tathlum",    reisenjima(sarsaok)
+        head="C. Palug Crown",
+        -- head="Befouled Crown",       vagary(Plouton)
+        body="Agwu's Robe",
+        -- body="Spaekona's Coat +3",   omen
         hands="Jhakri Cuffs +2",
+        --hands="Regal Cuffs"           omen ou     
+        legs="Psycloth Lappas",
+        feet="Agwu's Pigaches",
+        -- feet="Skaoi Boots",          reisenjima(albumen)
+        neck="Incanter's Torque",
+        waist="Casso Sash",
+        left_ear="Malignance Earring",
+        right_ear="Regal Earring",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
+        back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+5',}},
+        -- back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+30 /Mag. Dmg.+20',}},
+        }
+    -- sets.midcast['Enhancing Magic']  = {}
+    sets.midcast.elemental  = {  
+        main="Bunzi's rod",
+        sub="Ammurapi shield",
+        ammo="Floestone",
+        -- ammo="Pemphredo tathlum",        reisenjima(sarsaok)
+        head="Cath Palug crown",
+        -- head="Wicce Petasos +3",         sortie
+        body={ name="Merlinic Jubbah", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+3','"Mag.Atk.Bns."+11',}},
+        -- body="Wicce Coat +3",            sortie
+        hands="Jhakri Cuffs +2",
+        -- hands="Wicce Gloves +3",         sortie
         legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic Damage +10','INT+13',}},
+        -- legs="Wicce Chausses +3",        sortie
         feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Mag. crit. hit dmg. +9%','INT+15','Mag. Acc.+15',}},
+        -- feet="Wicce Sabots +3",          sortie
         neck="Saevus Pendant +1",
+        -- neck="Sorcerer's stole +2",      gil         vll auch saevus
         waist="Refoccilation stone",
+        -- waist="Hachirin-no-obi",         organs
         left_ear="Malignance earring",
-        right_ear="Barkarole Earring",
-        left_ring="Shiva Ring",
+        right_ear="Regal Earring",
+        -- right_ear="Wicce Earring +2",    sortie
+        left_ring="Jhakri Ring",
+        -- left_ring="Freke Ring",          htnm
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
         back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+5',}},
+        -- back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},      ambuscade
         }
+    sets.midcast.elementalacc  = set_combine(sets.midcast.elemental, {
+        -- neck="Sorcerer's stole +2",      gil 
+        -- back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+30 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},      ambuscade
+        })
+    -- MB-cap 40%    MBII no cap
+    sets.midcast.burst  = set_combine(sets.midcast.elemental, {     --I 40      II 2
+        main="Mpaca's staff",                      --I 0     II 2
+        head="Agwu's Cap",                        --I 7
+        -- head="Ea Hat +1",                gil     I 7     II 7
+        body="Agwu's Robe",                       --I 10
+        -- body="Ea Houppe. +1",            gil     I 9     II 9
+        hands="Agwu's Gages",                      --I 8
+        -- hands="Ea Cuffs +1",             gil     I 6     II 6
+        legs="Agwu's Slops",                       --I 9
+        -- legs="Ea Slops +1",              gil     I 8     II 8
+        feet="Agwu's Pigaches",                   --I 6
+        -- feet="Ea Pigaches +1",           gil     I 5     II 5
+        -- right_ring="Mujin Band",
+        -- back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+30 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},      ambuscade
+        })
+
     -- sets.midcast.magic = {}
+    sets.midcast.DrainAspir = set_combine(sets.midcast.elementalacc, {
+        -- main="Rubicundity"               SR
+        -- sub="Ammurapi shield",
+        head="Striga crown",              
+        neck="Erra Pendant",
+        -- legs="Spaekona's tonban +3"      omen
+        feet="Agwu's Pigaches",
+		waist="Austerity belt +1",
+		-- waist="Fucho-no-obi",            plasm
+        right_ear="Hirudinea Earring",
+		right_ear="Malignance Earring",
+        left_ring="Excelsis Ring",
+		-- left_ring="Archon Ring",         acrch dynamis lord
+        right_ring="Evanescence Ring",
+        })
+
+    sets.midcast['Death'] = {
+        -- bla
+    }
 
     --------------------------------------
     -- Idle/resting/defense/etc sets
@@ -73,41 +188,23 @@ function get_sets()
     
     -- gear_mode
     sets.aftercast.Idle[0]={    --refresh/mab
-        main={ name="Lathi", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-        sub="Elan Strap +1",
-        ammo="Floestone",
-        head={ name="Merlinic Hood", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Occult Acumen"+9','INT+6','"Mag.Atk.Bns."+4',}},
-        body="Vrikodara jupon",
-        hands="Jhakri Cuffs +2",
+        main="Mpaca's Staff",
+        sub="Kaja Grip",
+        ammo="Staunch Tathlum",
+        head="Agwu's Cap",
+        body="Agwu's Robe",
+        hands="Agwu's Gages",
         legs={ name="Assid. Pants +1", augments={'Path: A',}},
-        feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Mag. crit. hit dmg. +9%','INT+15','Mag. Acc.+15',}},
-        neck="Saevus Pendant +1",
-        waist="Austerity Belt +1",
-        left_ear="Malignance earring",
-        right_ear="Friomisi Earring",
-        left_ring="Karieyh Ring",
-        right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-        back="Mecistopins mantle"
-        --back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+5',}},
+        feet="Agwu's Pigaches",
+        neck="Twilight Torque",
+        waist="Gishdubar Sash",
+        left_ear="Halasz Earring",
+        right_ear="Ethereal Earring",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
+        back="Grapevine Cape",
         }
-    sets.aftercast.Idle[1]={    --refresh/macc
-        main={ name="Lathi", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-        sub="Elan Strap +1",
-        ammo="Floestone",
-        head={ name="Merlinic Hood", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Occult Acumen"+9','INT+6','"Mag.Atk.Bns."+4',}},
-        body="Vrikodara jupon",
-        hands="Jhakri Cuffs +2",
-        legs={ name="Assid. Pants +1", augments={'Path: A',}},
-        feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Mag. crit. hit dmg. +9%','INT+15','Mag. Acc.+15',}},
-        neck="Saevus Pendant +1",
-        waist="Austerity Belt +1",
-        left_ear="Malignance earring",
-        right_ear="Friomisi Earring",
-        left_ring="Karieyh Ring",
-        right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-        back="Mecistopins mantle"
-        --back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+5',}},
-        }
+    sets.aftercast.Idle[1]=set_combine(sets.midcast.elementalacc, {})    --refresh/macc       
     sets.aftercast.Idle[2]={    --dt/burst
         main={ name="Lathi", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
         sub="Elan Strap +1",
@@ -148,16 +245,28 @@ end
 
 function midcast(spell) 
     -- Magic-Boost   
-    -- if string.find(spell.english,'part of the name') then 
-    --     equip(sets.midcast.magictypename)
+    if string.find(spell.english,'Drain') then 
+        equip(sets.midcast.DrainAspir)
+    elseif string.find(spell.english,'Aspir') then 
+        equip(sets.midcast.DrainAspir)
+    elseif sets.midcast[spell.english] then
+            equip(sets.midcast[spell.english])
     -- elseif spell.english == 'exact name' then
     --     equip(sets.midcast.magicname)
     -- elseif spell.skill == 'Enfeebling Magic' then
     --     equip(sets.midcast['Enfeebling Magic'])
     -- elseif spell.skill == 'Enhancing Magic' then
     --     equip(sets.midcast['Enhancing Magic'])
-    if spell.skill == 'Elemental Magic' then
-        equip(sets.midcast['Elemental Magic'])
+    elseif spell.skill == 'Elemental Magic' then
+        if gear_mode == 0 then
+            equip(sets.midcast.elemental)
+        elseif gear_mode == 1 then
+            equip(sets.midcast.elementalacc)
+        elseif gear_mode == 2 then
+            equip(sets.midcast.burst)
+        end
+    elseif spell.skill == 'Enfeebling Magic' then
+        equip(sets.midcast.enfeebling)
     elseif spell.skill then
         equip(sets.aftercast.Idle)
     end
@@ -326,7 +435,7 @@ function self_command(command)
         send_command('input //xivcrossbar set default 1 7 ma "Voidstorm" me "Voidstorm"') 
         send_command('input //xivcrossbar set default 2 5 ja "Manifestation" me "Manifestation"')
         send_command('input //xivcrossbar set default 2 6 ma "Drain" t "Drain"')
-        send_command('input //xivcrossbar set default 2 7 ma "Aspir II" t "Aspir II"')
+        send_command('input //xivcrossbar set default 2 7 ma "Aspir II" t "Aspir III"')
         send_command('input //xivcrossbar set default 2 8 ja "Addendum: Black" me "Addendum: Black"')   
     end
 
@@ -380,4 +489,3 @@ function switch_statustext(gear_mode,weapon_mode)
         --     send_command('input //xivcrossbar set job-default 2 5 ws "Insurgency" t "Insurgency"')
         -- end
     end
-    
