@@ -32,6 +32,7 @@ function get_sets()
         left_ear="Loquac. Earring",         --2%
         left_ring="Kishar Ring",            --4%
         right_ring="Naji's Loop",           --1%
+        -- right_ring="Rahab Ring",        --2%        Escha(AA TT)
         back={ name="Ankou's Mantle", augments={'"Fast Cast"+10',}}, --10%
     }
     sets.Impact = set_combine(sets.precast.FC, {head=empty,body={name="Twilight Cloak",mp=75}})
