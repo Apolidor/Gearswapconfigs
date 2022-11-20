@@ -339,8 +339,7 @@ function get_sets()
         feet="Nyame Sollerets",
         -- feet="Malignance Boots",    HTNM
         neck="Sibyl Scarf",
-        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-        -- waist="Hachirin-no-obi"      farm
+        waist="Hachirin-no-obi",
         -- waist="Orpheus's Sash"              aman    gil     nyzulevent
         left_ear="Cessance Earring",
         -- left_ear="Eabani Earring",       domain invasion 100

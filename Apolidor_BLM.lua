@@ -72,8 +72,7 @@ function get_sets()
         -- waist="Shinjutsu-no-Obi +1", unm
         left_ear="Evans Earring",
         -- left_ear="Nehalennia Earring",   zurim
-        right_ear="Halasz Earring",
-        -- right_ear="Influx earring",  sparks
+        right_ear="Influx earring",  
         left_ring="Bifrost Ring",
         -- left_ring="Mephitas's Ring", unm
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
@@ -127,8 +126,7 @@ function get_sets()
         -- feet="Wicce Sabots +3",          sortie
         neck="Saevus Pendant +1",
         -- neck="Sorcerer's stole +2",      gil         vll auch saevus
-        waist="Refoccilation stone",
-        -- waist="Hachirin-no-obi",         organs
+        waist="Hachirin-no-obi",
         left_ear="Malignance earring",
         right_ear="Regal Earring",
         -- right_ear="Wicce Earring +2",    sortie
