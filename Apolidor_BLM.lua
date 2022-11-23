@@ -15,6 +15,13 @@ function get_sets()
     --------------------------------------
     sets.precast = {}
     --sets.precast['ws or ja'] = {}
+	sets.precast['Manafont'] = {}--body="Sorcerer's coat +2"} --besser ist egal
+	sets.precast['Elemental Seal'] = {}--main="Laevateinn"}
+	sets.precast['Mana Wall'] = {
+        feet="Wicce Sabots +2",
+        -- feet="Wicce Sabots +3",      sortie
+        back="Taranus's Cape",
+        }
     sets.precast.FC = {                 --63%   +8% on elemental(jobpoints)
         main="Mpaca's Staff",           --5%
         -- main="Oranyan",              --7%        reisenjima(schah)
@@ -42,6 +49,13 @@ function get_sets()
         -- back="Swith Cape +1 "           --4%        gil
         -- back="Taranus's Cape "          --10%       ambuscade
         }
+    sets.precast.FCElemental  = set_combine(sets.precast.FC, {            
+        body="Wicce Coat +2",
+        -- body="Wicce Coat +3",            sortie
+        -- hands="Loagaeth cuffs"           htnm
+        -- legs="Amalric Slops +1"          gil
+        -- feet="Tutyr Sabots "             escha(Pakecet)
+        })
 
     --------------------------------------
     -- Weaponskill sets
@@ -110,19 +124,19 @@ function get_sets()
         }
     -- sets.midcast['Enhancing Magic']  = {}
     sets.midcast.elemental  = {  
-        main="Bunzi's rod",
+        main="Bunzi's rod",     
         sub="Ammurapi shield",
-        ammo="Floestone",
-        -- ammo="Pemphredo tathlum",        reisenjima(sarsaok)
-        head="Cath Palug crown",
+        ammo="Ghastly Tathlum +1",
+        -- ammo="Sroda Tathlum",            gil     test
+        head="Wicce Petasos +2",
         -- head="Wicce Petasos +3",         sortie
-        body={ name="Merlinic Jubbah", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+3','"Mag.Atk.Bns."+11',}},
+        body="Wicce Coat +2",
         -- body="Wicce Coat +3",            sortie
-        hands="Jhakri Cuffs +2",
+        hands="Wicce Gloves +2",
         -- hands="Wicce Gloves +3",         sortie
         legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic Damage +10','INT+13',}},
         -- legs="Wicce Chausses +3",        sortie
-        feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Mag. crit. hit dmg. +9%','INT+15','Mag. Acc.+15',}},
+        feet="Wicce Sabots +2",
         -- feet="Wicce Sabots +3",          sortie
         neck="Saevus Pendant +1",
         -- neck="Sorcerer's stole +2",      gil         vll auch saevus
@@ -133,38 +147,46 @@ function get_sets()
         left_ring="Jhakri Ring",
         -- left_ring="Freke Ring",          htnm
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+        -- right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},    Lustreless Scale
         back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+5',}},
-        -- back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},      ambuscade
+        -- back={ name="Taranus's Cape", augments={'INT+30','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},      ambuscade
         }
     sets.midcast.elementalacc  = set_combine(sets.midcast.elemental, {
+        -- ammo="Pemphredo tathlum",        reisenjima(sarsaok)
         -- neck="Sorcerer's stole +2",      gil 
         -- back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+30 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},      ambuscade
         })
     -- MB-cap 40%    MBII no cap
     sets.midcast.burst  = set_combine(sets.midcast.elemental, {     --I 40      II 2
         main="Mpaca's staff",                      --I 0     II 2
+        sub="Enki Strap",
+        -- ammo="Ghastly Tathlum +1",       Lustreless Hide
         head="Agwu's Cap",                        --I 7
         -- head="Ea Hat +1",                gil     I 7     II 7
         body="Agwu's Robe",                       --I 10
         -- body="Ea Houppe. +1",            gil     I 9     II 9
         hands="Agwu's Gages",                      --I 8
         -- hands="Ea Cuffs +1",             gil     I 6     II 6
+        -- hands="Agwu's Gages",            sheol  --I 8    II 5
         legs="Agwu's Slops",                       --I 9
         -- legs="Ea Slops +1",              gil     I 8     II 8
         feet="Agwu's Pigaches",                   --I 6
         -- feet="Ea Pigaches +1",           gil     I 5     II 5
-        -- right_ring="Mujin Band",
-        -- back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+30 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},      ambuscade
+        -- neck="Sorcerer's stole +2",      gil     I 10
+        -- right_ring="Mujin Band",         gil     I 0     II 5
         })
 
     -- sets.midcast.magic = {}
     sets.midcast.DrainAspir = set_combine(sets.midcast.elementalacc, {
         -- main="Rubicundity"               SR
         -- sub="Ammurapi shield",
-        head="Striga crown",              
-        neck="Erra Pendant",
+        head="Striga crown",   
+        -- head="Merlinic Hood"             DI
+        -- body="Merlinic jubbah"           DI
+        -- hands="Merlinic dastanas"        DI
         -- legs="Spaekona's tonban +3"      omen
-        feet="Agwu's Pigaches",
+        feet="Agwu's Pigaches",           
+        neck="Erra Pendant",
 		waist="Austerity belt +1",
 		-- waist="Fucho-no-obi",            plasm
         right_ear="Hirudinea Earring",
@@ -189,6 +211,7 @@ function get_sets()
         main="Mpaca's Staff",
         sub="Kaja Grip",
         ammo="Staunch Tathlum",
+        -- ammo="Staunch Tathlum +1",       gil
         head="Agwu's Cap",
         body="Agwu's Robe",
         hands="Agwu's Gages",
@@ -237,7 +260,11 @@ function precast(spell)
         equip(sets.precast[spell.english])
     -- Fast Cast for Magic    
     elseif spell.action_type == 'Magic' then
+        if spell.skill == 'Elemental Magic' then
+            equip(sets.precast.FCElemental)
+        else            
             equip(sets.precast.FC)
+        end
     end
 end
 
@@ -433,7 +460,7 @@ function self_command(command)
         send_command('input //xivcrossbar set default 1 7 ma "Voidstorm" me "Voidstorm"') 
         send_command('input //xivcrossbar set default 2 5 ja "Manifestation" me "Manifestation"')
         send_command('input //xivcrossbar set default 2 6 ma "Drain" t "Drain"')
-        send_command('input //xivcrossbar set default 2 7 ma "Aspir II" t "Aspir III"')
+        send_command('input //xivcrossbar set default 2 7 ma "Aspir III" t "Aspir III"')
         send_command('input //xivcrossbar set default 2 8 ja "Addendum: Black" me "Addendum: Black"')   
     end
 
