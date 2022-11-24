@@ -332,21 +332,19 @@ function get_sets()
         ammo="Aurgelmir Orb",
         head="Malignance Chapeau",
         body="Malignance Tabard",
-        hands="Malignance Gloves",
-        -- hands="Aya. Manopolas +2"    ambuscade
+        hands="Ayanmo Manopolas +2",
         legs="Bunzi's Pants",
-        -- legs="Malignance Tights",    HTNM
+        -- legs="Malignance Tights",            HTNM
         feet="Nyame Sollerets",
-        -- feet="Malignance Boots",    HTNM
+        -- feet="Malignance Boots",             HTNM
         neck="Sibyl Scarf",
         waist="Hachirin-no-obi",
-        -- waist="Orpheus's Sash"              aman    gil     nyzulevent
-        left_ear="Cessance Earring",
-        -- left_ear="Eabani Earring",       domain invasion 100
+        -- waist="Orpheus's Sash"               aman    gil     nyzulevent
+        left_ear="Eabani Earring",
         right_ear="Sherida Earring",
         left_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, 
         right_ring="Petrov Ring",
-        -- right_ring="Hetairoi ring"       reisenjima
+        -- right_ring="Hetairoi ring"           reisenjima
         back="Letalis Mantle",
         -- back="Sucellos's Cape", [DEX +20/Accuracy +30/Attack +20/Dual Wield +10]     ambuscade
         }
@@ -463,7 +461,7 @@ end
 -- Stances
 -------------------------------------------------------------------------------------------------------------------
 function self_command(command)
-    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%2 end
+    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%3 end
     equip(sets.aftercast.Idle[gear_mode])
 
     if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%4 end
