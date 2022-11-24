@@ -330,7 +330,8 @@ function get_sets()
 
     sets.aftercast.Idle[2]={    --Endamage
         ammo="Aurgelmir Orb",
-        head="Malignance Chapeau",
+        -- head="Malignance Chapeau",
+        head="Umuthi Hat",                  --test
         body="Malignance Tabard",
         hands="Ayanmo Manopolas +2",
         legs="Bunzi's Pants",
