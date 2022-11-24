@@ -329,26 +329,27 @@ function get_sets()
         }  
 
     sets.aftercast.Idle[2]={    --Endamage
-        ammo="Aurgelmir Orb",
-        -- head="Malignance Chapeau",
-        head="Umuthi Hat",                      --test
+        ammo="Coiste Bodhar",                   --test
+        -- ammo="Aurgelmir Orb",
+        head="Umuthi Hat",                    
         body="Malignance Tabard",
         hands="Ayanmo Manopolas +2",
         legs="Bunzi's Pants",
         -- legs="Malignance Tights",            HTNM
         feet="Nyame Sollerets",
         -- feet="Malignance Boots",             HTNM
-        neck="Sibyl Scarf",
-        waist="Hachirin-no-obi",
+        neck="Asperity necklace",               --test
+        -- neck="Sibyl Scarf",
+        waist="Sailfi Belt +1",                 --test
+        -- waist="Hachirin-no-obi",
         -- waist="Orpheus's Sash"               aman    gil     nyzulevent
         left_ear="Eabani Earring",
         right_ear="Sherida Earring",
-        left_ring="Stikini Ring +1",            --test
-        right_ring="Stikini Ring +1",           --test
-        -- left_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, 
-        -- right_ring="Petrov Ring",
+        right_ring="Stikini Ring +1",           --test         
+        left_ring="Petrov Ring",
         -- right_ring="Hetairoi ring"           reisenjima
-        back="Letalis Mantle",
+        -- back="Letalis Mantle",
+        back="Ghostfyre Cape",                  --test
         -- back="Sucellos's Cape", [DEX +20/Accuracy +30/Attack +20/Dual Wield +10]     ambuscade
         }
 
