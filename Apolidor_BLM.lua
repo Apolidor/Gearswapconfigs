@@ -22,6 +22,34 @@ function get_sets()
         -- feet="Wicce Sabots +3",      sortie
         back="Taranus's Cape",
         }
+    sets.precast['Death']  = {           
+        ammo="Strobilus",
+        head="Amanita Hairpin",
+        -- head="Pixie Hairpin +1"      gil
+        -- head="Kaabnax Hat"           wildskeeper
+        body={ name="Nyame Mail", augments={'Path: B',}},
+        -- body="Ros. Jaseran +1"       unm
+        -- body="Amalric doublet +1",   gil
+        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        -- hands="Otomi gloves",           wildskeeper
+        legs="Psycloth lappas",
+        -- legs="Spae. Tonban +3",      omen
+        -- legs="Amalric slops +1",     gil
+        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        -- feet="Psycloth boots",       escha(gestalt)
+        neck="Dualism collar +1",
+        waist="Acuity Belt +1",
+        -- waist="Shinjutsu-no-Obi +1", unm
+        left_ear="Evans Earring",
+        -- left_ear="Nehalennia Earring",   zurim
+        right_ear="Influx earring",  
+        left_ring="Bifrost Ring",
+        -- left_ring="Mephitas's Ring", unm
+        right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+        -- right_ring="Mephitas's Ring +1", unm
+        back="Aurist's Cape +1",
+        -- back="Bane cape",            jse
+        }
     sets.precast.FC = {                 --63%   +8% on elemental(jobpoints)
         main="Mpaca's Staff",           --5%
         -- main="Oranyan",              --7%        reisenjima(schah)
@@ -56,6 +84,8 @@ function get_sets()
         -- legs="Amalric Slops +1"          gil
         -- feet="Tutyr Sabots "             escha(Pakecet)
         })
+    
+
 
     --------------------------------------
     -- Weaponskill sets
@@ -66,34 +96,7 @@ function get_sets()
     sets.precast.WSMulti = {}  
     --sets.precast.['ws'] = set_combine(sets.precast.WSSingle, {})
     --maxMP
-    sets.precast['Myrkr'] = {
-        ammo="Strobilus",
-        head="Amanita Hairpin",
-        -- head="Pixie Hairpin +1"      gil
-        -- head="Kaabnax Hat"           wildskeeper
-        body={ name="Nyame Mail", augments={'Path: B',}},
-        -- body="Ros. Jaseran +1"       unm
-        -- body="Amalric doublet +1",   gil
-        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-        -- hands="Otomi gloves",           wildskeeper
-        legs="Psycloth lappas",
-        -- legs="Spae. Tonban +3",      omen
-        -- legs="Amalric slops +1",     gil
-        feet={ name="Nyame Sollerets", augments={'Path: B',}},
-        -- feet="Psycloth boots",       escha(gestalt)
-        neck="Dualism collar +1",
-        waist="Acuity Belt +1",
-        -- waist="Shinjutsu-no-Obi +1", unm
-        left_ear="Evans Earring",
-        -- left_ear="Nehalennia Earring",   zurim
-        right_ear="Influx earring",  
-        left_ring="Bifrost Ring",
-        -- left_ring="Mephitas's Ring", unm
-        right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-        -- right_ring="Mephitas's Ring +1", unm
-        back="Aurist's Cape +1",
-        -- back="Bane cape",            jse
-        }
+    sets.precast['Myrkr'] = sets.precast['Death']
 
     --------------------------------------
     -- Midcast sets
@@ -196,9 +199,7 @@ function get_sets()
         right_ring="Evanescence Ring",
         })
 
-    sets.midcast['Death'] = {
-        -- bla
-    }
+    sets.midcast['Death'] = sets.precast['Death']
 
     --------------------------------------
     -- Idle/resting/defense/etc sets
@@ -225,7 +226,7 @@ function get_sets()
         right_ring="Stikini Ring +1",
         back="Grapevine Cape",
         }
-    sets.aftercast.Idle[1]=set_combine(sets.midcast.elementalacc, {})    --refresh/macc       
+    sets.aftercast.Idle[1]=sets.precast['Death']    --death/macc       
     sets.aftercast.Idle[2]={    --dt/burst
         main={ name="Lathi", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
         sub="Elan Strap +1",
