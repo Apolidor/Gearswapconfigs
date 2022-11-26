@@ -21,7 +21,7 @@ function get_sets()
     -- Weaponskill sets
     --------------------------------------
     -- default set
-    sets.precast.WSMSingle = {
+    sets.precast.WSSingle = {
         ammo="Seeth. Bomblet +1",
         -- ammo="Seeth. Bomblet +1",       --lustreless hide
         head={ name="Nyame Helm", augments={'Path: B',}},
