@@ -16,7 +16,7 @@ function get_sets()
     sets.precast = {}
     --sets.precast['ws or ja'] = {}
 	sets.precast['Manafont'] = {}--body="Sorcerer's coat +2"} --besser ist egal
-	sets.precast['Elemental Seal'] = {}--main="Laevateinn"}
+	sets.precast['Elemental Seal'] = {main="Baqil staff"}--main="Laevateinn"}
 	sets.precast['Mana Wall'] = {
         feet="Wicce Sabots +2",
         -- feet="Wicce Sabots +3",      sortie
@@ -25,13 +25,10 @@ function get_sets()
     sets.precast['Death']  = {           
         ammo="Strobilus",
         head="Amanita Hairpin",
-        -- head="Pixie Hairpin +1"      gil
-        -- head="Kaabnax Hat"           wildskeeper
-        body={ name="Nyame Mail", augments={'Path: B',}},
-        -- body="Ros. Jaseran +1"       unm
+        head="Kaabnax Hat",
+        body="Ros. Jaseran +1",       
         -- body="Amalric doublet +1",   gil
-        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-        -- hands="Otomi gloves",           wildskeeper
+        hands="Otomi gloves",
         legs="Psycloth lappas",
         -- legs="Spae. Tonban +3",      omen
         -- legs="Amalric slops +1",     gil
@@ -43,10 +40,9 @@ function get_sets()
         left_ear="Evans Earring",
         -- left_ear="Nehalennia Earring",   zurim
         right_ear="Influx earring",  
-        left_ring="Bifrost Ring",
-        -- left_ring="Mephitas's Ring", unm
-        right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-        -- right_ring="Mephitas's Ring +1", unm
+        left_ring="Mephitas's Ring",
+        right_ring="Mephitas's Ring +1",
+        -- right_ring="Mephitas's Ring +1",     Lustreless Hide
         back="Aurist's Cape +1",
         -- back="Bane cape",            jse
         }
@@ -137,7 +133,7 @@ function get_sets()
         -- body="Wicce Coat +3",            sortie
         hands="Wicce Gloves +2",
         -- hands="Wicce Gloves +3",         sortie
-        legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic Damage +10','INT+13',}},
+        legs="Wicce Chausses +2",
         -- legs="Wicce Chausses +3",        sortie
         feet="Wicce Sabots +2",
         -- feet="Wicce Sabots +3",          sortie
@@ -164,16 +160,21 @@ function get_sets()
         main="Mpaca's staff",                      --I 0     II 2
         sub="Enki Strap",
         -- ammo="Ghastly Tathlum +1",       Lustreless Hide
-        head="Agwu's Cap",                        --I 7
+        -- head="Agwu's Cap",                        --I 7
+        head="Ea Hat",
         -- head="Ea Hat +1",                gil     I 7     II 7
-        body="Agwu's Robe",                       --I 10
+        -- body="Agwu's Robe",                       --I 10
+        body="Ea Houppe.", 
         -- body="Ea Houppe. +1",            gil     I 9     II 9
-        hands="Agwu's Gages",                      --I 8
+        -- hands="Agwu's Gages",                      --I 8
+        hands="Ea Cuffs",
         -- hands="Ea Cuffs +1",             gil     I 6     II 6
         -- hands="Agwu's Gages",            sheol  --I 8    II 5
-        legs="Agwu's Slops",                       --I 9
+        -- legs="Agwu's Slops",                       --I 9
+        legs="Ea Slops",
         -- legs="Ea Slops +1",              gil     I 8     II 8
-        feet="Agwu's Pigaches",                   --I 6
+        -- feet="Agwu's Pigaches",                   --I 6
+        feet="Ea Pigaches",
         -- feet="Ea Pigaches +1",           gil     I 5     II 5
         -- neck="Sorcerer's stole +2",      gil     I 10
         -- right_ring="Mujin Band",         gil     I 0     II 5
@@ -487,7 +488,7 @@ function switch_statustext(gear_mode,weapon_mode)
     if gear_mode == 0 then
         gear_description = "MAB/Refresh__"
     elseif gear_mode == 1 then
-        gear_description = "MAcc/Refresh_"  
+        gear_description = "MAcc/Death___"  
     elseif gear_mode == 2 then
         gear_description = "Burst/DT_____"  
     end

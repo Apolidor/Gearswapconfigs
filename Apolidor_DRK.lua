@@ -250,10 +250,9 @@ function get_sets()
         feet="Ratri Sollerets",
 		--feet="Ratri Sollerets +1",       gil
         waist="Eschan Stone",
-        left_ear="Bloodgem Earring",
-		--left_ear="Odnowa Earring +1",     UNM
-        right_ear="Cassie Earring",
-		--right_ear="Odnowa Earring",     UNM
+        left_ear="Odnowa Earring +1",
+        -- left_ear="Odnowa Earring +1",        Lustreless Hide,
+        right_ear="Odnowa Earring",    
         left_ring="Meridian Ring",
         right_ring="Bomb Queen Ring",
 		--right_ring="Gelatinous Ring +1",     UNM
