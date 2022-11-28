@@ -35,7 +35,7 @@ function get_sets()
         feet={ name="Nyame Sollerets", augments={'Path: B',}},
         -- feet="Psycloth boots",       escha(gestalt)
         neck="Dualism collar +1",
-        waist="Acuity Belt +1",
+        waist="Shinjutsu-no-Obi",
         -- waist="Shinjutsu-no-Obi +1", unm
         left_ear="Evans Earring",
         -- left_ear="Nehalennia Earring",   zurim
