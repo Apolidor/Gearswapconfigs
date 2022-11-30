@@ -129,7 +129,7 @@ function get_sets()
         waist="Embla Sash",
         neck="Duelist's torque +1",
         --neck="Duelist's torque +2",           gil
-        right_ear={ name="Lethargy Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+8','Mag. Acc.+8',}},
+        right_ear="Lethargy Earring +1",
         --right_ear="Lethargy Earring +2",      sortie
         })
 
@@ -155,7 +155,7 @@ function get_sets()
         -- hands="Amalric Gages +1",       abjuration  gil
         legs="Lethargy Fuseau +2",
         -- legs="Amalric Slops +1",       abjuration  gil
-        feet="Leth. Houseaux +2",
+        feet="Lethargy Houseaux +2",
         -- feet="Amalric Nails +1",       abjuration  gil
         neck="Sibyl Scarf",
         waist="Refoccilation Stone",
