@@ -143,8 +143,7 @@ function get_sets()
         left_ear="Malignance earring",
         right_ear="Regal Earring",
         -- right_ear="Wicce Earring +2",    sortie
-        left_ring="Jhakri Ring",
-        -- left_ring="Freke Ring",          htnm
+        left_ring="Freke Ring",
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
         -- right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},    Lustreless Scale
         back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+5',}},

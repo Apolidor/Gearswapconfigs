@@ -162,8 +162,7 @@ function get_sets()
         -- waist="Sacro Cord",          HTNM
         left_ear="Malignance Earring",
         right_ear="Regal Earring",
-        left_ring="Locus Ring",
-        -- left_ring="Freke Ring",      HTNM
+        left_ring="Freke Ring",
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, 
         -- right_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, --lustreless scale
         back="Sucellos's Cape", 
@@ -193,8 +192,7 @@ function get_sets()
         left_ear="Malignance Earring",
         right_ear="Friomisi Earring",
         -- right_ring="Mujin Band",       dynamis   gil
-        left_ring="Locus Ring",
-        -- left_ring="Freke Ring",      HTNM
+        left_ring="Freke Ring",
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
         back="Sucellos's Cape", 
         -- back="Sucellos's Cape", --ambuscade
