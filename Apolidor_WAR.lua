@@ -145,17 +145,29 @@ end
 -------------------------------------------------------------------------------------------------------------------
 function self_command(command)
     if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%2 end
-    if command:lower() == 'gear1' then gear_mode = 0 end
-    if command:lower() == 'gear2' then gear_mode = 1 end
     equip(sets.aftercast.Idle[gear_mode])
 
     if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%2 end
-    if command:lower() == 'weapon1' then weapon_mode = 0 end
-    if command:lower() == 'weapon2' then weapon_mode = 1 end
+
     equip(sets.aftercast.Weapon[weapon_mode])
-   
-	switch_crossbar(weapon_mode)	    
+    -- switch_statustext(gear_mode,weapon_mode)
+	switch_crossbar(weapon_mode)	 
 end
 
 function switch_crossbar(mode)
+    if mode == 0 then
+        send_command('input /p ga')
+        send_command('input //xivcrossbar set job-default 2 6 ws "Upheaval" t "Upheaval"')
+        send_command('input //xivcrossbar set job-default 2 7 ws "Ukko\'s Fury" t "Ukko s Fury"')
+        send_command('input //xivcrossbar set job-default 2 8 ws "Fell Cleave" t "Fell Cleave"')
+        send_command('input //xivcrossbar set job-default 2 5 ws "Steel Cyclone" t "Steel Cyclone"')
+    end
+
+    if mode == 1 then
+        send_command('input /p GS')
+        send_command('input //xivcrossbar set job-default 2 6 ws "Scourge" t "Scourge"')
+        send_command('input //xivcrossbar set job-default 2 7 ws "Resolution" t "Resolution"')
+        send_command('input //xivcrossbar set job-default 2 8 ws "Shockwave" t "Shockwave"')
+        send_command('input //xivcrossbar set job-default 2 5 ws "Herculean Slash" t "Herculean Slash"')
+    end
 end

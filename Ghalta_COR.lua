@@ -22,7 +22,7 @@ function get_sets()
         neck="Regal necklace",
         back={ name="Camulus's Mantle", augments={'"Dbl.Atk."+10',}},
     }
-    sets.precast.Fold = {hands="Lanun Gants +3"}
+    sets.precast.Fold = {}  --hands="Lanun Gants +3"}
     sets.precast.FC = {}
 
     --------------------------------------
