@@ -466,6 +466,7 @@ function midcast(spell)
 end
 
 function buff_change(name, gain, buff_details)
+    -- send_command('input /p buff change')
     if name == 'Souleater'
     then
         if gain
@@ -476,6 +477,17 @@ function buff_change(name, gain, buff_details)
         end
         equip(set_combine(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode]))	
         switch_crossbar(weapon_mode)
+    -- elseif name == 'Sleep' 
+    -- then
+    -- send_command('input /p sleep')
+    --     if gain        
+    --     then
+    --     send_command('input /p gain')
+    --         equip({main="Helheim"})
+    --         send_command('input /p prime')
+    --     end
+    -- else
+    --     send_command('input /p '..name) 
     end
 end
 
