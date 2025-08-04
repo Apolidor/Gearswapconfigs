@@ -12,8 +12,8 @@ function get_sets()
     --------------------------------------
     sets.precast = {}
     sets.precast.JA = {}
-	sets.precast.JA['Arcane Circle'] = {feet="Ignominy Sollerets +3"}
-    sets.precast.JA['Nether Void'] = {legs="Heath. Flanchard +2"} -- legs="Heath. Flanchard +3" sortie
+	sets.precast.JA['Arcane Circle'] = {feet="Ignominy Sollerets +3"}   --feet="Ignominy Sollerets +4"  limbus
+    sets.precast.JA['Nether Void'] = {legs="Heath. Flanchard +2"}       --legs="Heath. Flanchard +3"    sortie
     sets.precast.JA['Last Resort'] = {feet="Fallen's sollerets",back="Ankou's Mantle"}
     sets.precast.JA['Weapon Bash'] = {hands="Ig. Gauntlets +3"} 
     sets.precast.JA['Dark Seal'] = {head={ name="Fallen's Burgeonet", augments={'Enhances "Dark Seal" effect',}}}  
@@ -26,16 +26,18 @@ function get_sets()
 		hands="Leyline Gloves",        --5%
 		--hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, --8%        sinister reign
         legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},  --5%
-		feet="Carmine Greaves +1", --8%
+		--legs="Enif cosciales", --8%                   gil
+        feet="Carmine Greaves +1", --8%
 		--neck="Voltsurge Torque", --4%         HTNM
         right_ear="Malignance Earring",     --4%
         left_ear="Loquac. Earring",         --2%
         left_ring="Kishar Ring",            --4%
         right_ring="Naji's Loop",           --1%
         -- right_ring="Rahab Ring",        --2%        Escha(AA TT)
+        -- right_ring="Prolix Ring",        --2%       Viodwatch
         back={ name="Ankou's Mantle", augments={'"Fast Cast"+10',}}, --10%
     }
-    sets.Impact = set_combine(sets.precast.FC, {head=empty,body={name="Twilight Cloak",mp=75}})
+    sets.Impact = set_combine(sets.precast.FC, {head=empty,body={name="Twilight Cloak",mp=75}})  --body="Crepuscular cloak"
 
     --------------------------------------
     -- Weaponskill sets
