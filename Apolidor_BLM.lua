@@ -46,9 +46,8 @@ function get_sets()
         back="Aurist's Cape +1",
         -- back="Bane cape",            jse
         }
-    sets.precast.FC = {                 --63%   +8% on elemental(jobpoints)
-        main="Mpaca's Staff",           --5%
-        -- main="Oranyan",              --7%        reisenjima(schah)
+    sets.precast.FC = {                 --65%   +8% on elemental(jobpoints)
+        main="Oranyan",              --7%        reisenjima(schah)
         -- main="Hvergelmir",           --50%       empy
         sub="Clerisy Strap",            --2%
         -- sub="Clerisy Strap +1",      --3%
