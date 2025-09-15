@@ -28,6 +28,7 @@ function get_sets()
         legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},  --5%
 		--legs="Enif cosciales", --8%                   gil
         feet="Carmine Greaves +1", --8%
+        --feet="Odyssean Greaves", --11%        domain points
 		--neck="Voltsurge Torque", --4%         HTNM
         right_ear="Malignance Earring",     --4%
         left_ear="Loquac. Earring",         --2%
@@ -165,8 +166,7 @@ function get_sets()
     --------------------------------------
     sets.midcast = {} 
     sets.midcast['Enfeebling Magic']  = { 
-	    -- sub="Khonsu",        ambuscade   pulse
-	    sub="Kaja Grip",
+	    sub="Khonsu",
         ammo="Quartz Tathlum +1",
         head="Flam. Zucchetto +2",
         body="Flamma Korazin +2",
@@ -183,7 +183,7 @@ function get_sets()
         }
     sets.midcast.Drain = {
         main="Misanthropy",
-	    -- sub="Khonsu",        ambuscade   pulse
+	    sub="Khonsu",
 		range="Ullr", 
 	    sub="Kaja Grip",
         head={ name="Fallen's Burgeonet", augments={'Enhances "Dark Seal" effect',}},
@@ -205,10 +205,12 @@ function get_sets()
         back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +8','"Drain" and "Aspir" potency +22',}}
         }
     sets.midcast.Endark = {
+        --main="Malfeasance +1",                  gil
         head="Ig. Burgeonet +3",
         body="Demon's Harness",
 		--body="Carmine Scale Mail +1",       abjuration  gil
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
+		--hands={ name="Fall. Fin. Gaunt. +4", augments={'Enhances "Diabolic Eye" effect',}},
 		legs="Heathen's flanchard +2",
 		-- legs="Heathen's flanchard +3",   sortie
         feet="Ratri Sollerets",
@@ -220,10 +222,10 @@ function get_sets()
         left_ring="Stikini Ring +1",
         right_ring="Evanescence Ring",
         back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +8','"Drain" and "Aspir" potency +22',}}
+        --back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +10','"Drain" and "Aspir" potency +22',}}
         }
     sets.midcast['Elemental Magic'] = {    
-	    -- sub="Khonsu",        ambuscade   pulse
-	    sub="Kaja Grip",
+	    sub="Khonsu",
         ammo="Seething Bomblet +1",
         head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
         body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
@@ -260,7 +262,7 @@ function get_sets()
 		--right_ring="Gelatinous Ring +1",     UNM
         }
     sets.midcast.Absorb = {   
-	    -- sub="Khonsu",        ambuscade   pulse
+	    sub="Khonsu",
 		range="Ullr",
 	    sub="Kaja Grip",
         head="Ig. Burgeonet +3",
@@ -279,7 +281,7 @@ function get_sets()
         back="Chuparrosa Mantle",
         }
     sets.midcast['Stun'] = {   
-	    -- sub="Khonsu",        ambuscade   pulse
+	    sub="Khonsu",
 		range="Ullr",
 	    sub="Kaja Grip",
         head={ name="Carmine Mask", augments={'Accuracy+15','Mag. Acc.+10','"Fast Cast"+3',}},
@@ -298,7 +300,7 @@ function get_sets()
         back={ name="Niht Mantle", augments={'Attack+10','Dark magic skill +8','"Drain" and "Aspir" potency +22',}}
         }    
     sets.midcast.Impact = {
-	    -- sub="Khonsu",        ambuscade   pulse
+	    sub="Khonsu",
 		range="Ullr",
 	    sub="Kaja Grip",
         body="Twilight Cloak",
