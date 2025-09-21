@@ -25,8 +25,7 @@ function get_sets()
 		body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}}, --10%
 		hands="Leyline Gloves",        --5%
 		--hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, --8%        sinister reign
-        legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},  --5%
-		--legs="Enif cosciales", --8%                   gil
+        legs="Enif cosciales", --8%                   gil
         feet="Carmine Greaves +1", --8%
         --feet="Odyssean Greaves", --11%        domain points
 		--neck="Voltsurge Torque", --4%         HTNM
