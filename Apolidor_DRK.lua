@@ -354,7 +354,23 @@ function get_sets()
         back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
         }
 
-    sets.aftercast.Idle[2]={    --subtle blow
+    sets.aftercast.Idle[2]={    --acc
+        ammo="Seething Bomblet +1",
+        head="Sakpata's Helm",
+        body="Heathen's Cuirass +2",
+        hands="Sakpata's Gauntlets",
+        legs="Heathen's Flanchard +2",
+        feet="Sakpata's Leggings",
+        neck={ name="Abyssal Beads +1", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
+        left_ear="Cessance Earring",
+        right_ear="Abyssal Earring",
+        left_ring="Niqmaddu Ring",
+        right_ring="Defending Ring",
+        back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+        }
+
+    sets.aftercast.Idle[3]={    --subtle blow
         ammo="Coiste Bodhar",
         head="Sakpata's Helm",
         neck={"Bathy choker +1"},                                   --11
@@ -375,22 +391,6 @@ function get_sets()
         --legs="Sulev. Cuisses +2",                                 --5
         feet="Sakpata's Leggings",
         --feet="Sulev. Leggings +2",                                --5
-        }
-
-    sets.aftercast.Idle[3]={    --acc
-        ammo="Seething Bomblet +1",
-        head="Flam. Zucchetto +2",
-        body={ name="Valorous Mail", augments={'"Drain" and "Aspir" potency +5','CHR+1','Quadruple Attack +2','Accuracy+13 Attack+13',}},
-        hands="Sulev. Gauntlets +2",
-        legs="Ig. Flanchard +3",
-        feet="Flam. Gambieras +2",
-        neck={ name="Abyssal Beads +1", augments={'Path: A',}},
-        waist="Wanion Belt",
-        left_ear="Cessance Earring",
-        right_ear="Abyssal Earring",
-        left_ring="Flamma Ring",
-        right_ring="Varar Ring +1",
-        back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
         }
     
     sets.aftercast.Weapon = {}  
@@ -512,7 +512,7 @@ end
 -- Stances
 -------------------------------------------------------------------------------------------------------------------
 function self_command(command)
-    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%2 end
+    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%3 end
     equip(sets.aftercast.Idle[gear_mode])
 
     if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%6 end
@@ -529,6 +529,8 @@ function switch_statustext(gear_mode,weapon_mode)
     elseif gear_mode == 1 then
         gear_description = "DamageTaken__"
     elseif gear_mode == 2 then
+        gear_description = "TP-Acc_______"
+    elseif gear_mode == 3 then
         gear_description = "SubtleBlow___"
     end
 
