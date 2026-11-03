@@ -356,9 +356,9 @@ function get_sets()
 
     sets.aftercast.Idle[2]={    --acc
         ammo="Seething Bomblet +1",
-        head="Sakpata's Helm",
+        head="Heathen's Burgeonet +2",
         body="Heathen's Cuirass +2",
-        hands="Sakpata's Gauntlets",
+        hands="Heathen's Gauntlets +2",
         legs="Heathen's Flanchard +2",
         feet="Sakpata's Leggings",
         neck={ name="Abyssal Beads +1", augments={'Path: A',}},
@@ -366,7 +366,7 @@ function get_sets()
         left_ear="Cessance Earring",
         right_ear="Abyssal Earring",
         left_ring="Niqmaddu Ring",
-        right_ring="Defending Ring",
+        right_ring="Chirich Ring +1",
         back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
         }
 
