@@ -59,8 +59,7 @@ function get_sets()
         -- right_ear="Heathen Earring +2",      sky/sea
         left_ring="Karieyh Ring",
 		--left_ring="Epaminondas's Ring",       aman    gil     nyzulevent
-        right_ring="Niqmaddu Ring",
-        -- right_ring="Ephramad's Ring",      voracious quest
+        right_ring="Ephramad's Ring",
         back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},} 
     -- sets.precast.WSSingle = {
     --     ammo="Knobkierrie",
@@ -89,7 +88,7 @@ function get_sets()
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         right_ear={ name="Lugra Earring +1", augments={'Path: A',}},
-        right_ring="Niqmaddu Ring",
+        right_ring="Ephramad's Ring",
         left_ring="Regal Ring",
         back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
     
