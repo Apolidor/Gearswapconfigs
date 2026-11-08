@@ -49,8 +49,7 @@ function get_sets()
         body="Ignominy Cuirass +3",
         -- body="Ignominy Cuirass +4",     sky/sea
         hands="Nyame Gauntlets",
-        legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
-        -- legs={ name="Fall. Flanchard +4", augments={'Enhances "Muted Soul" effect',}},     sky/sea
+        legs={ name="Fall. Flanchard +4", augments={'Enhances "Muted Soul" effect',}},
         feet="Heathen's sollerets +3",
         neck={ name="Abyssal Beads +2", augments={'Path: A',}},
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -186,7 +185,7 @@ function get_sets()
         head="Flam. Zucchetto +2",
         body="Flamma Korazin +2",
         hands="Ratri Gadlings",
-        legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+        legs={ name="Fall. Flanchard +4", augments={'Enhances "Muted Soul" effect',}},
         feet="Flam. Gambieras +2",
         neck="Erra Pendant",
         waist="Eschan Stone",
@@ -283,7 +282,7 @@ function get_sets()
         body="Nyame mail",
 		--body="Carmine Scale Mail +1",       abjuration  gil
         hands="Pavor Gauntlets",
-        legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+        legs={ name="Fall. Flanchard +4", augments={'Enhances "Muted Soul" effect',}},
         feet="Ratri Sollerets",
         --feet="Ratri Sollerets +1",       gil
         neck="Erra Pendant",
@@ -303,7 +302,7 @@ function get_sets()
         body="Nyame mail",
         --body="Carmine Scale Mail +1",       abjuration  gil
         hands="Nyame Gauntlets",
-        legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+        legs={ name="Fall. Flanchard +4", augments={'Enhances "Muted Soul" effect',}},
         feet="Nyame Sollerets",
         neck="Erra Pendant",
         waist="Eschan Stone",
@@ -457,6 +456,9 @@ function precast(spell)
         equip(sets.precast[spell.english])
     elseif spell.english == 'Impact' then
         equip(sets.Impact)
+    elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
+		cast_delay(0.2)
+		send_command('cancel Sneak')
     elseif spell.action_type == 'Magic' then
             equip(sets.precast.FC)
     end
