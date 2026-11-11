@@ -65,7 +65,7 @@ function get_sets()
         left_ear="Mache Earring",
         right_ear="Mache Earring",
         left_ring="Mummu Ring",
-        right_ring="Barataria Ring",
+        right_ring="Murky Ring",
         back={ name="Camulus's Mantle", augments={'"Dbl.Atk."+10',}},
         }
     sets.aftercast.Idle[1]={}
@@ -73,7 +73,7 @@ function get_sets()
     sets.aftercast.Weapon = {}  
     
     sets.aftercast.Weapon[0]={ 
-        main="Tokko Sword",
+        main="Naegling",
         range={ name="Compensator", augments={'DMG:+15','AGI+15','Rng.Acc.+15',}},
         ammo="Eminent Bullet",
         }
@@ -96,7 +96,10 @@ function precast(spell)
             equip(sets.precast.PhantomRoll)
     elseif spell.english == 'Fold' and buffactive['Bust'] == 2 then 
         equip(sets.precast.Fold)       
-    -- Fast Cast for Magic    
+    -- Fast Cast for Magic
+    elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
+		cast_delay(0.2)
+		send_command('cancel Sneak')    
     elseif spell.action_type == 'Magic' then
             equip(sets.precast.FC)
     end
@@ -114,8 +117,9 @@ function midcast(spell)
     -- elseif spell.skill == 'Elemental Magic' then
     --     equip(sets.midcast['Elemental Magic'])
     -- elseif spell.skill then
+    if spell.skill then
         equip(sets.aftercast.Idle)
-    -- end
+    end
 end
 
 function buff_change(name, gain, buff_details)
@@ -133,6 +137,7 @@ function buff_change(name, gain, buff_details)
     --     switch_crossbar(weapon_mode)
     -- end
 end
+
 
 function aftercast(spell)
     equip(set_combine(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode]))	
@@ -179,12 +184,12 @@ function switch_statustext(gear_mode,weapon_mode)
 end
 function switch_crossbar(mode)
 
-    -- if mode == 0 then
-    --     send_command('input //xivcrossbar set job-default 2 6 ws "Frostbite" t "Frostbite"')
-    --     send_command('input //xivcrossbar set job-default 2 7 ws "Torcleaver" t "Torcleaver"')
-    --     send_command('input //xivcrossbar set job-default 2 8 ws "Shockwave" t "Shockwave"')
-    --     send_command('input //xivcrossbar set job-default 2 5 ws "Resolution" t "Resolution"')
-    -- end
+    if mode == 0 then
+        send_command('input //xivcrossbar set job-default 2 6 ws "Savage Blade" t "Savage Blade"')
+        send_command('input //xivcrossbar set job-default 2 7 ws "Split Shot" t "Split Shot"')
+        send_command('input //xivcrossbar set job-default 2 8 ws "Light Shot" t "Light Shot"')
+        send_command('input //xivcrossbar set job-default 2 5 ws "Hot Shot" t "Hot Shot"')
+    end
 
 	-- if mode == 1 or mode == 99 then
     --     send_command('input //xivcrossbar set job-default 2 6 ws "Catastrophe" t "Catastrophe"')

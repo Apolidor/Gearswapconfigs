@@ -43,7 +43,7 @@ function get_sets()
     -- Weaponskill sets
     --------------------------------------
     --WSD, PDL if ATK-Capped
-    sets.precast.WSSingle = {
+    sets.precast.WSSingleHighATK = {
         ammo="Knobkierrie",
         head="Heathen's Burgeonet +3",
         body="Ignominy Cuirass +3",
@@ -54,29 +54,47 @@ function get_sets()
         neck={ name="Abyssal Beads +2", augments={'Path: A',}},
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear="Thrud Earring",
-        right_ear="Heathen Earring +1",
+        right_ear="Heathen's Earring +1",
         -- right_ear="Heathen Earring +2",      sky/sea
         left_ring="Karieyh Ring",
 		--left_ring="Epaminondas's Ring",       aman    gil     nyzulevent
         right_ring="Ephramad's Ring",
         back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},} 
-    -- sets.precast.WSSingle = {
-    --     ammo="Knobkierrie",
-    --     head={ name="Stinger Helm +1", augments={'Path: A',}},
-    --     body="Ignominy Cuirass +3",
-    --     hands="Sakpata's Gauntlets",
-    --     legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
-    --     feet="Heathen's sollerets +3",
-    --     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
-    --     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    --     left_ear="Thrud Earring",
-    --     right_ear="Ishvara Earring",
-    --     left_ring="Karieyh Ring",
-	-- 	--left_ring="Epaminondas's Ring",       aman    gil     nyzulevent
-    --     right_ring="Niqmaddu Ring",
-    --     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},}
+    sets.precast.WSSingleLowATK = {
+        ammo="Knobkierrie",
+        head="Nyame Helm",
+        body="Ignominy Cuirass +3",
+        -- body="Ignominy Cuirass +4",     sky/sea
+        hands="Nyame Gauntlets",
+        legs={ name="Fall. Flanchard +4", augments={'Enhances "Muted Soul" effect',}},
+        feet="Heathen's sollerets +3",
+        neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        left_ear="Ishvara Earring",
+        right_ear="Thrud Earring",
+        left_ring="Karieyh Ring",
+		--left_ring="Epaminondas's Ring",       aman    gil     nyzulevent
+        right_ring="Niqmaddu Ring",
+		--right_ring="Epaminondas's Ring",       aman    gil     nyzulevent
+        back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},} 
     --PDL and Multi
-    sets.precast.WSMulti = {
+    sets.precast.WSMultiHighATK = {
+        ammo="Coiste Bodhar",
+        head="Heathen's Burgeonet +3",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings",
+        neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+        right_ear="Heathen's Earring +1",
+        -- right_ear="Heathen Earring +2",      sky/sea
+        right_ring="Ephramad's Ring",
+        left_ring="Regal Ring",
+        --left_ring="Sroda Ring",
+        back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
+    sets.precast.WSMultiLowATK = {
         ammo="Coiste Bodhar",
         head="Sakpata's Helm",
         body="Sakpata's Plate",
@@ -87,16 +105,24 @@ function get_sets()
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         right_ear={ name="Lugra Earring +1", augments={'Path: A',}},
-        right_ring="Ephramad's Ring",
-        left_ring="Regal Ring",
+        right_ring="Regal Ring",
+        right_ring="Niqmaddu Ring",
         back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
     
+function update_ws_sets()
+        if gear_mode == 0 then
+            sets.precast.WSSingle = sets.precast.WSSingleLowATK
+            sets.precast.WSMulti = sets.precast.WSMultiLowATK
+        elseif gear_mode == 1 then
+            sets.precast.WSSingle = sets.precast.WSSingleHighATK
+            sets.precast.WSMulti = sets.precast.WSMultiHighATK
+        end
     ---------Scythe------------
     --single    str40, int40    	2,75    2,75    2,75
     sets.precast['Catastrophe'] = set_combine(sets.precast.WSSingle, {})
     --double    str60, mnd60        2,0     4,0     7,0
     sets.precast['Cross Reaper'] = set_combine(sets.precast.WSSingle, {
-        right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},})
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},})
     --fourfold  int73               0,75    1,25    2,0     ftp-replicating
     sets.precast['Entropy'] = set_combine(sets.precast.WSMulti, {
         neck="Fotia Gorget",
@@ -115,7 +141,7 @@ function get_sets()
     sets.precast['Torcleaver'] = set_combine(sets.precast.WSSingle, {
         --head="Nyame Helm",
         --hands="Nyame Gauntlets",
-        right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
         --waist="Fotia Belt",
 	    })
@@ -131,7 +157,7 @@ function get_sets()
     -----------Sword-----------
     --double    str50, mnd50        4,0     10,25   13,75
     sets.precast['Savage Blade'] = set_combine(sets.precast.WSSingle, {
-        right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         })
     --fivefold  mnd73               1,0     1,0     1,0     ftp-replicating
     sets.precast['Requiescat'] = set_combine(sets.precast.WSMulti, {
@@ -157,7 +183,7 @@ function get_sets()
     sets.precast['Judgment'] = set_combine(sets.precast.WSSingle, {
         neck="Fotia Gorget",
         waist="Fotia Belt",
-        right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         })
     ----------Hand2Hand-----------
     --8hits    str15, vit15         1,25    1,25    1,25
@@ -172,9 +198,10 @@ function get_sets()
     sets.precast['Fell Cleave'] = set_combine(sets.precast.WSSingle, {})
     --single    str60, vit60        1,5     2,5     4,0
     sets.precast['Steel Cyclone'] = set_combine(sets.precast.WSSingle, {
-        right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         })
 
+end
     --------------------------------------
     -- Midcast sets
     --------------------------------------
@@ -266,6 +293,7 @@ function get_sets()
 		--legs="Ratri Cuisses +1",       gil
         feet="Ratri Sollerets",
 		--feet="Ratri Sollerets +1",       gil
+        neck="Dualism collar +1",
         waist="Eschan Stone",
         left_ear="Odnowa Earring +1",
         -- left_ear="Odnowa Earring +1",        Lustreless Hide,
@@ -335,7 +363,42 @@ function get_sets()
     --------------------------------------
     sets.aftercast = {}
     sets.aftercast.Idle = {}
-    sets.aftercast.Idle[0]={    --normal
+
+    sets.aftercast.Idle[0]={    --lowATK
+        ammo="Seething Bomblet +1",
+        head="Sakpata's Helm",
+        -- head="Heathen's Burgeonet +3",
+        body="Heathen's Cuirass +2",
+        hands="Heathen's Gauntlets +2",
+        legs="Heathen's Flanchard +2",
+        feet="Sakpata's Leggings",
+        neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
+        left_ear="Cessance Earring",
+        right_ear="Crepuscular Earring",
+        left_ring="Niqmaddu Ring",
+        right_ring="Chirich Ring +1",
+        back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+        }
+
+    sets.aftercast.Idle[1]={    --highATK
+        ammo="Seething Bomblet +1",
+        head="Sakpata's Helm",
+        -- head="Heathen's Burgeonet +3",
+        body="Heathen's Cuirass +2",
+        hands="Heathen's Gauntlets +2",
+        legs="Heathen's Flanchard +2",
+        feet="Sakpata's Leggings",
+        neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+        waist="Ioskeha Belt +1",
+        left_ear="Cessance Earring",
+        right_ear="Crepuscular Earring",
+        left_ring="Niqmaddu Ring",
+        right_ring="Chirich Ring +1",
+        back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+        }
+        
+    sets.aftercast.Idle[2]={    --normal
         ammo="Coiste Bodhar",
         head="Flam. Zucchetto +2",
         --body={ name="Valorous Mail", augments={'"Drain" and "Aspir" potency +5','CHR+1','Quadruple Attack +2','Accuracy+13 Attack+13',}},
@@ -349,37 +412,6 @@ function get_sets()
         right_ear="Brutal Earring",
         left_ring="Petrov Ring",
         right_ring="Niqmaddu Ring",
-        back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-        }
-
-    sets.aftercast.Idle[1]={    --dt
-        ammo="Coiste Bodhar",
-        head="Sakpata's Helm",
-        body="Sakpata's Plate",
-        hands="Sakpata's Gauntlets",
-        legs="Sakpata's Cuisses",
-        feet="Sakpata's Leggings",
-        neck={ name="Abyssal Beads +2", augments={'Path: A',}},
-        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-        left_ear="Ethereal Earring",
-        right_ear="Brutal Earring",
-        right_ring="Defending Ring",
-        back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-        }
-
-    sets.aftercast.Idle[2]={    --acc
-        ammo="Seething Bomblet +1",
-        head="Heathen's Burgeonet +3",
-        body="Heathen's Cuirass +2",
-        hands="Heathen's Gauntlets +2",
-        legs="Heathen's Flanchard +2",
-        feet="Sakpata's Leggings",
-        neck={ name="Abyssal Beads +2", augments={'Path: A',}},
-        waist="Ioskeha Belt +1",
-        left_ear="Cessance Earring",
-        right_ear="Crepuscular Earring",
-        left_ring="Niqmaddu Ring",
-        right_ring="Chirich Ring +1",
         back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
         }
 
@@ -528,7 +560,7 @@ end
 -- Stances
 -------------------------------------------------------------------------------------------------------------------
 function self_command(command)
-    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%3 end
+    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%2 end
     equip(sets.aftercast.Idle[gear_mode])
 
     if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%6 end
@@ -536,16 +568,18 @@ function self_command(command)
     equip(sets.aftercast.Weapon[weapon_mode])
     switch_statustext(gear_mode,weapon_mode)
 	switch_crossbar(weapon_mode)	    
-    
+
+    update_ws_sets()
+
 end
 
 function switch_statustext(gear_mode,weapon_mode)
     if gear_mode == 0 then
-        gear_description = "TP-Build_____"
+        gear_description = "TP-LowATK____"
     elseif gear_mode == 1 then
-        gear_description = "DamageTaken__"
+        gear_description = "TP-HighATK___"
     elseif gear_mode == 2 then
-        gear_description = "TP-Acc_______"
+        gear_description = "TP-Build_____"
     elseif gear_mode == 3 then
         gear_description = "SubtleBlow___"
     end

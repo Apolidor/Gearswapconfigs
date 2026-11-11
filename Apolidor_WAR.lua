@@ -52,11 +52,11 @@ function get_sets()
         back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
     
     sets.precast['Savage Blade'] = set_combine(sets.precast.WSSingle, {
-        right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         })
   
     sets.precast['Upheaval'] = set_combine(sets.precast.WSSingle, {
-        right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         })
     
     --sets.precast.WS['ws'] = set_combine(sets.precast.WS, {})
