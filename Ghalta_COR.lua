@@ -145,13 +145,12 @@ function aftercast(spell)
 end
 
 function status_change(new_status, old_status)
-    --movementspeed  make modular?
-    -- if new_status == 'Idle' then
-    --     equip({legs="Carmine Cuisses +1"})
-    -- elseif
-    --     new_status == 'Engaged' then
-    --     equip(sets.aftercast.Idle[gear_mode])
-    -- end
+    if new_status == 'Idle' then
+        equip({legs="Carmine Cuisses +1"})
+    elseif
+        new_status == 'Engaged' then
+        equip(sets.aftercast.Idle[gear_mode])
+    end
 end
 -------------------------------------------------------------------------------------------------------------------
 -- Stances
