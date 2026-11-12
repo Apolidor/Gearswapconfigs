@@ -14,7 +14,22 @@ function get_sets()
     sets.precast = {}
     sets.precast.JA = {}
     --sets.precast.JA['ja'] = {}
-    sets.precast.FC = {}
+    sets.precast.FC = {
+        main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+        sub="genbu's shield",
+        -- head="Fili Calot +3",
+        body="Inyanga Jubbah +2",
+        hands="Gendewitha Gages",
+        -- hands="Gendewitha Gages +1",
+        legs="Ayanmo Cosciales +2",
+        -- feet="Fili Cothurnes +3",
+        neck="Twilight Torque",
+        waist="Embla Sash",
+        left_ear="Loquac. Earring",
+        right_ear="fili earring",
+        right_ring="Kishar Ring",
+        back="Intarabus's Cape"
+    }
 
     --------------------------------------
     -- Weaponskill sets
@@ -48,19 +63,25 @@ function get_sets()
         -- main="Carnwenhan"
         sub="Legato Dagger",
         range="Gjallarhorn",
+        -- head="Fili Calot +3",
         body="Fili Hongreline +2",
+        -- body="Fili Hongreline +3",
+        hands="Fili Manchettes +2",
+        -- hands="Fili Manchettes +3",
         legs="Inyanga Shalwar +2",
         feet="Brioso Slippers +1",
-        -- feet="Brioso Slippers +3",
+        -- feet="Brioso Slippers +4",
         neck="Moonbow Whistle +1",
         }
 
     sets.midcast.minuet = set_combine(sets.midcast.songbuff,{
         body="Fili Hongreline +2",
+        -- body="Fili Hongreline +3",
     })
     
     sets.midcast.march = set_combine(sets.midcast.songbuff,{
         hands="Fili Manchettes +2",
+        -- hands="Fili Manchettes +3",
     })
 
     --------------------------------------
@@ -75,11 +96,13 @@ function get_sets()
         ammo="Cheruski Needle",
         head="Inyanga Tiara +2",
         body="Fili Hongreline +2",
+        -- body="Fili Hongreline +3",
         hands="Fili Manchettes +2",
-        legs="Inyanga Shalwar +2",
+        -- hands="Fili Manchettes +3",
+        legs="Ayanmo Cosciales +2",
         feet="Inyan. Crackows +2",
         neck="Asperity Necklace",
-        waist="Windbuffet Belt +1",
+        waist="Anguinus Belt",
         left_ear="Cessance Earring",
         right_ear="Brutal Earring",
         left_ring="Petrov Ring",
@@ -89,7 +112,10 @@ function get_sets()
     sets.aftercast.Idle[1]={}
 
     -- weapon_mode        
-    sets.aftercast.Weapon[0]={}       
+    sets.aftercast.Weapon[0]={
+        main="Naegling",
+        sub="Genbu's Shield",
+        }       
     sets.aftercast.Weapon[1]={}    
 
     songsetup = false
