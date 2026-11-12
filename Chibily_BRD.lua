@@ -60,8 +60,7 @@ function get_sets()
     })
     
     sets.midcast.march = set_combine(sets.midcast.songbuff,{
-        hands="Fili Manchettes",
-        -- hands="Fili Manchettes +2",
+        hands="Fili Manchettes +2",
     })
 
     --------------------------------------
@@ -76,7 +75,7 @@ function get_sets()
         ammo="Cheruski Needle",
         head="Inyanga Tiara +2",
         body="Fili Hongreline +2",
-        hands="Inyan. Dastanas +2",
+        hands="Fili Manchettes +2",
         legs="Inyanga Shalwar +2",
         feet="Inyan. Crackows +2",
         neck="Asperity Necklace",
