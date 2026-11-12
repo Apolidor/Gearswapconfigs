@@ -72,9 +72,9 @@ function get_sets()
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear="Ishvara Earring",
         right_ear="Thrud Earring",
-        left_ring="Karieyh Ring",
+        right_ring="Karieyh Ring",
 		--left_ring="Epaminondas's Ring",       aman    gil     nyzulevent
-        right_ring="Niqmaddu Ring",
+        left_ring="Niqmaddu Ring",
 		--right_ring="Epaminondas's Ring",       aman    gil     nyzulevent
         back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},} 
     --PDL and Multi
@@ -106,7 +106,7 @@ function get_sets()
         left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
         right_ear={ name="Lugra Earring +1", augments={'Path: A',}},
         right_ring="Regal Ring",
-        right_ring="Niqmaddu Ring",
+        left_ring="Niqmaddu Ring",
         back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
     
 function update_ws_sets()
@@ -410,8 +410,8 @@ end
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear="Cessance Earring",
         right_ear="Brutal Earring",
-        left_ring="Petrov Ring",
-        right_ring="Niqmaddu Ring",
+        right_ring="Petrov Ring",
+        left_ring="Niqmaddu Ring",
         back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
         }
 
@@ -427,8 +427,8 @@ end
         --body="Dagon breastplate",                             --(2) 10        omen kin
         --body="Sulevia's Plate. +2", DT                            --5
         hands="Sakpata's Gauntlets",                                --8  
-        right_ring="Niqmaddu Ring",                             --(2) 5
-        left_ring="Chirich Ring +1",                                --10
+        left_ring="Niqmaddu Ring",                             --(2) 5
+        right_ring="Chirich Ring +1",                                --10
         --back={ name="Ankou's Mantle", augments={'???,}},          --??
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         --waist="Peiste Belt +1,                                    --10
