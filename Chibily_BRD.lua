@@ -6,7 +6,6 @@ function get_sets()
     --------------------------------------
     gear_mode = 0
     weapon_mode = 0
-    songsetup = true
 
     --------------------------------------
     -- Precast sets
@@ -55,7 +54,6 @@ function get_sets()
         -- range="Daurdabla",
         body="Fili Hongreline +2",
         legs="Inyanga Shalwar +2",
-        feet="Brioso Slippers +1",
         neck="Moonbow Whistle +1",
         left_ring="Stikini Ring",
         right_ring="Stikini Ring",
@@ -72,8 +70,7 @@ function get_sets()
         hands="Fili Manchettes +2",
         -- hands="Fili Manchettes +3",
         legs="Inyanga Shalwar +2",
-        feet="Brioso Slippers +1",
-        -- feet="Brioso Slippers +4",
+        feet="Brioso Slippers +4",
         neck="Moonbow Whistle +1",
         }
 
@@ -96,15 +93,18 @@ function get_sets()
     
     -- gear_mode
     sets.aftercast.Idle[0]={
-        ammo="Cheruski Needle",
-        head="Inyanga Tiara +2",
+        ammo="Jukukik Feather",
+        head="Fili Calot +2",
+        -- head="Fili Calot +3",
         body="Fili Hongreline +2",
         -- body="Fili Hongreline +3",
         hands="Fili Manchettes +2",
         -- hands="Fili Manchettes +3",
-        legs="Ayanmo Cosciales +2",
-        feet="Inyan. Crackows +2",
-        neck="Asperity Necklace",
+        legs="Fili Rhingrave +2",
+        -- legs="Fili Rhingrave +3",
+        feet="Fili Cothurnes +2",
+        -- feet="Fili Cothurnes +3",
+        neck="Twilight Torque",
         waist="Anguinus Belt",
         left_ear="Cessance Earring",
         right_ear="Brutal Earring",
@@ -201,6 +201,32 @@ function self_command(command)
 	switch_crossbar(weapon_mode)	
 end
 
+function switch_statustext(gear_mode,weapon_mode)
+    if gear_mode == 0 then
+        gear_description = "TP___________"
+    elseif gear_mode == 1 then
+        gear_description = "TP-HighATK___"
+    elseif gear_mode == 2 then
+        gear_description = "TP-Build_____"
+    elseif gear_mode == 3 then
+        gear_description = "SubtleBlow___"
+    end
+
+    if weapon_mode == 0 then
+        weapon_description = "Sword"
+    elseif weapon_mode == 1 then
+        weapon_description = "Scythe"
+    elseif weapon_mode == 2 then
+        weapon_description = "Sword"
+    elseif weapon_mode == 3 then
+        weapon_description = "Club"
+    elseif weapon_mode == 4 then
+        weapon_description = "Hand2Hand"
+    elseif weapon_mode == 5 then
+        weapon_description = "Great Axe"
+    end
+    send_command('input //text status text Gear:'..gear_description..' Weapon:'..weapon_description)
+end
 
 function switch_crossbar(mode)
     -- if mode == 0 then
