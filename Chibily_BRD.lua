@@ -104,13 +104,14 @@ function get_sets()
         -- legs="Fili Rhingrave +3",
         feet="Fili Cothurnes +2",
         -- feet="Fili Cothurnes +3",
-        neck="Twilight Torque",
+        neck="Bard's Charm",
+        -- neck="Bard's Charm +2",
         waist="Anguinus Belt",
         left_ear="Cessance Earring",
         right_ear="Brutal Earring",
         left_ring="Petrov Ring",
         right_ring="Rajas Ring",
-        back="Atheling Mantle",
+        back="Intarabus's Cape"
         }
     sets.aftercast.Idle[1]={}
 
@@ -229,10 +230,10 @@ function switch_statustext(gear_mode,weapon_mode)
 end
 
 function switch_crossbar(mode)
-    -- if mode == 0 then
-    --     send_command('input //xivcrossbar set job-default 2 6 ws "Savage Blade" t "Savage Blade"')
-    --     send_command('input //xivcrossbar set job-default 2 7 ws "Requiescat" t "Requiescat"')
-    --     send_command('input //xivcrossbar set job-default 2 8 ws "Circle Blade" t "Circle Blade"')
-    --     send_command('input //xivcrossbar set job-default 2 5 ws "Sanguine Blade" t "Sanguine Blade"')
-    -- end
+    if mode == 0 then
+        send_command('input //xivcrossbar set job-default 2 6 ws "Savage Blade" t "Savage Blade"')
+        send_command('input //xivcrossbar set job-default 2 7 ws "Requiescat" t "Requiescat"')
+        send_command('input //xivcrossbar set job-default 2 8 ws "Circle Blade" t "Circle Blade"')
+        send_command('input //xivcrossbar set job-default 2 5 ws "Sanguine Blade" t "Sanguine Blade"')
+    end
 end
