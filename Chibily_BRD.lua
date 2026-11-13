@@ -17,11 +17,13 @@ function get_sets()
     sets.precast.FC = {
         main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
         sub="genbu's shield",
+        head="Fili Calot +2",
         -- head="Fili Calot +3",
         body="Inyanga Jubbah +2",
         hands="Gendewitha Gages",
         -- hands="Gendewitha Gages +1",
         legs="Ayanmo Cosciales +2",
+        feet="Fili Cothurnes +2",
         -- feet="Fili Cothurnes +3",
         neck="Twilight Torque",
         waist="Embla Sash",
@@ -63,6 +65,7 @@ function get_sets()
         -- main="Carnwenhan"
         sub="Legato Dagger",
         range="Gjallarhorn",
+        head="Fili Calot +2",
         -- head="Fili Calot +3",
         body="Fili Hongreline +2",
         -- body="Fili Hongreline +3",
@@ -136,18 +139,23 @@ end
 
 function midcast(spell) 
     -- Magic-Boost  
-    if spell.type == 'BardSong' then
-        if songsetup == false then
-            if string.find(spell.english,'Minuet') then 
-                equip(sets.midcast.minuet)
-            elseif string.find(spell.english,'March') then
-                equip(sets.midcast.march)
-            else
-                equip(sets.midcast.songbuff)
-            end
-        else
+    if spell.type == 'BardSong' then  
+        if spell.english == "Army's Paeon" then
             equip(sets.midcast.songsetup)
+        elseif spell.english == "Army's Paeon II" then
+            equip(sets.midcast.songsetup)
+        else
+            equip(sets.midcast.songbuff)
         end
+
+        if string.find(spell.english,'Minuet') then 
+            equip(sets.midcast.minuet)
+        elseif string.find(spell.english,'March') then
+            equip(sets.midcast.march)
+        end
+    
+        
+        
     end
     -- if string.find(spell.english,'part of the name') then 
     --     equip(sets.midcast.magic)
@@ -165,23 +173,40 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-        equip(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode])
+    equip(set_combine(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode]))	
+	switch_crossbar(weapon_mode)
+end
+
+function status_change(new_status, old_status)
+    if new_status == 'Idle' then
+        equip({feet="Fili Cothurnes +2"})
+        -- equip({feet="Fili Cothurnes +3"})
+    elseif
+        new_status == 'Engaged' then
+        equip(sets.aftercast.Idle[gear_mode])
+    end
 end
 
 -------------------------------------------------------------------------------------------------------------------
 -- Stances
 -------------------------------------------------------------------------------------------------------------------
 function self_command(command)
-    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%2 end
-    if command:lower() == 'gear1' then gear_mode = 0 end
-    if command:lower() == 'gear2' then gear_mode = 1 end
+    if command:lower() == 'switchgear' then gear_mode = (gear_mode+1)%1 end
     equip(sets.aftercast.Idle[gear_mode])
 
-    if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%2 end
-    if command:lower() == 'weapon1' then weapon_mode = 0 end
-    if command:lower() == 'weapon2' then weapon_mode = 1 end
-    equip(sets.aftercast.Weapon[weapon_mode])
+    if command:lower() == 'switchweapon' then weapon_mode = (weapon_mode+1)%1 end
 
-    if command:lower() == 'setup' then songsetup = true end
-    if command:lower() == 'buff' then songsetup = false end
+    equip(sets.aftercast.Weapon[weapon_mode])
+    switch_statustext(gear_mode,weapon_mode)
+	switch_crossbar(weapon_mode)	
+end
+
+
+function switch_crossbar(mode)
+    -- if mode == 0 then
+    --     send_command('input //xivcrossbar set job-default 2 6 ws "Savage Blade" t "Savage Blade"')
+    --     send_command('input //xivcrossbar set job-default 2 7 ws "Requiescat" t "Requiescat"')
+    --     send_command('input //xivcrossbar set job-default 2 8 ws "Circle Blade" t "Circle Blade"')
+    --     send_command('input //xivcrossbar set job-default 2 5 ws "Sanguine Blade" t "Sanguine Blade"')
+    -- end
 end
