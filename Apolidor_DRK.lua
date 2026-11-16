@@ -46,8 +46,7 @@ function get_sets()
     sets.precast.WSSingleHighATK = {
         ammo="Knobkierrie",
         head="Heathen's Burgeonet +3",
-        body="Ignominy Cuirass +3",
-        -- body="Ignominy Cuirass +4",     sky/sea
+        body="Ignominy Cuirass +4",
         hands="Nyame Gauntlets",
         legs={ name="Fall. Flanchard +4", augments={'Enhances "Muted Soul" effect',}},
         feet="Heathen's sollerets +3",
@@ -63,8 +62,7 @@ function get_sets()
     sets.precast.WSSingleLowATK = {
         ammo="Knobkierrie",
         head="Nyame Helm",
-        body="Ignominy Cuirass +3",
-        -- body="Ignominy Cuirass +4",     sky/sea
+        body="Ignominy Cuirass +4",
         hands="Nyame Gauntlets",
         legs={ name="Fall. Flanchard +4", augments={'Enhances "Muted Soul" effect',}},
         feet="Heathen's sollerets +3",
@@ -209,15 +207,15 @@ end
     sets.midcast['Enfeebling Magic']  = { 
 	    sub="Khonsu",
         ammo="Quartz Tathlum +1",
-        head="Flam. Zucchetto +2",
-        body="Flamma Korazin +2",
-        hands="Ratri Gadlings",
+        head="Heathen's Burgeonet +3",
+        body="Ignominy Cuirass +4",
+        hands="Heathen's Gauntlets +2",
         legs={ name="Fall. Flanchard +4", augments={'Enhances "Muted Soul" effect',}},
-        feet="Flam. Gambieras +2",
+        feet="Heathen's Sollerets +3",
         neck="Null Loop",
         waist="Eschan Stone",
         left_ear={ name="Lugra Earring +1", augments={'Path: A',}},
-        right_ear="Abyssal Earring",
+        right_ear="Malignance Earring",
         left_ring="Kishar Ring",
         right_ring="Stikini Ring +1",
         back="Chuparrosa Mantle",
@@ -232,7 +230,8 @@ end
         body={ name="Valorous Mail", augments={'"Drain" and "Aspir" potency +5','CHR+1','Quadruple Attack +2','Accuracy+13 Attack+13',}},
         -- ???body="Carm. Sc. Mail +1",       abjuration  gil
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
-		legs="Fallen's Flanchard +3",
+		legs="Heathen's Flanchard +2",
+		-- legs="Heathen's Flanchard +3",
         feet="Ratri Sollerets",
 		-- feet="Ratri Sollerets +1",       gil
         neck="Erra Pendant",
@@ -248,6 +247,7 @@ end
     sets.midcast.Endark = {
         --main="Malfeasance +1",                  gil
         head="Ig. Burgeonet +3",
+        -- head="Ig. Burgeonet +4",
         body="Demon's Harness",
 		--body="Carmine Scale Mail +1",       abjuration  gil
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
@@ -257,6 +257,7 @@ end
         feet="Ratri Sollerets",
 		--feet="Ratri Sollerets +1",        gil
         neck="Incanter's Torque",
+        -- neck="Hoxne Torque",
         waist="Casso Sash",
         left_ear="Abyssal Earring",
         right_ear="Mani Earring",
@@ -437,6 +438,11 @@ end
         feet="Sakpata's Leggings",
         --feet="Sulev. Leggings +2",                                --5
         }
+
+    sets.aftercast.Idle[99]={
+        head="Twilight Helm",
+        body="Crepuscular Mail",
+    }
     
     sets.aftercast.Weapon = {}  
     
