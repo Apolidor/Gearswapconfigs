@@ -16,7 +16,7 @@ function get_sets()
     sets.precast.JA['Nether Void'] = {legs="Heath. Flanchard +2"}       --legs="Heath. Flanchard +3"    sortie
     sets.precast.JA['Last Resort'] = {feet="Fallen's sollerets",back="Ankou's Mantle"}
     sets.precast.JA['Weapon Bash'] = {hands="Ig. Gauntlets +3"} 
-    sets.precast.JA['Dark Seal'] = {head={ name="Fallen's Burgeonet", augments={'Enhances "Dark Seal" effect',}}}  
+    sets.precast.JA['Dark Seal'] = {head={ name="Fallen's Burgeonet +4", augments={'Enhances "Dark Seal" effect',}}}  
 	sets.precast.JA['Blood Weapon'] = {body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}}}
     sets.precast.FC = {                     --63%
         ammo="Sapience Orb",                --2%    
@@ -225,8 +225,7 @@ end
 	    sub="Khonsu",
 		range="Ullr", 
 	    sub="Kaja Grip",
-        head={ name="Fallen's Burgeonet", augments={'Enhances "Dark Seal" effect',}},
-        -- head={ name="Fallen's Burgeonet +3", augments={'Enhances "Dark Seal" effect',}},
+        head={ name="Fallen's Burgeonet +4", augments={'Enhances "Dark Seal" effect',}},
         body={ name="Valorous Mail", augments={'"Drain" and "Aspir" potency +5','CHR+1','Quadruple Attack +2','Accuracy+13 Attack+13',}},
         -- ???body="Carm. Sc. Mail +1",       abjuration  gil
         hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
