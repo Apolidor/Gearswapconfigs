@@ -30,7 +30,8 @@ function get_sets()
     --------------------------------------
     --WSD, PDL if ATK-Capped
     sets.precast.WSSingle = {
-        back={ name="Camulus's Mantle", augments={'Weapon skill damage +10%',}},
+        left_ring="Karieyh Ring", 
+        back={name="Camulus's Mantle", augments={'Weapon skill damage +10%',}},
     }   
     --PDL and Multi
     sets.precast.WSMulti = {
@@ -38,6 +39,7 @@ function get_sets()
     }  
     --sets.precast.['ws'] = set_combine(sets.precast.WSSingle, {})
     sets.precast['Last Stand'] = set_combine(sets.precast.WSSingle,{})
+    sets.precast['Savage Blade'] = set_combine(sets.precast.WSSingle, {})
 
     --------------------------------------
     -- Midcast sets
@@ -56,11 +58,11 @@ function get_sets()
    
     sets.aftercast.Idle[0]={
         head="Mummu Bonnet +1",
-        body="Nisroch Jerkin",
+        body="Mummu Jacket +1",
         hands="Mummu Wrists +1",
         legs="Mummu Kecks +2",
         feet="Mummu Gamash. +2",
-        neck="Iqabi Necklace",
+        neck="Commodore Charm",
         waist="Dynamic Belt",
         left_ear="Mache Earring",
         right_ear="Mache Earring",
@@ -140,8 +142,11 @@ end
 
 
 function aftercast(spell)
-    equip(set_combine(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode]))	
-	switch_crossbar(weapon_mode)
+        if player.status == 'Engaged' then equip(set_combine(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode]))
+        else equip(set_combine(sets.aftercast.Idle[gear_mode],sets.aftercast.Weapon[weapon_mode],{legs="Carmine Cuisses +1"}))
+        end
+
+        switch_crossbar(weapon_mode)
 end
 
 function status_change(new_status, old_status)
@@ -186,7 +191,7 @@ function switch_crossbar(mode)
     if mode == 0 then
         send_command('input //xivcrossbar set job-default 2 6 ws "Savage Blade" t "Savage Blade"')
         send_command('input //xivcrossbar set job-default 2 7 ws "Split Shot" t "Split Shot"')
-        send_command('input //xivcrossbar set job-default 2 8 ws "Light Shot" t "Light Shot"')
+        send_command('input //xivcrossbar set job-default 2 8 ja "Light Shot" t "Light Shot"')
         send_command('input //xivcrossbar set job-default 2 5 ws "Hot Shot" t "Hot Shot"')
     end
 
