@@ -30,6 +30,7 @@ function get_sets()
     --------------------------------------
     --WSD, PDL if ATK-Capped
     sets.precast.WSSingle = {
+        hands="Meghanada Gloves",
         left_ring="Karieyh Ring", 
         back={name="Camulus's Mantle", augments={'Weapon skill damage +10%',}},
     }   
@@ -58,10 +59,10 @@ function get_sets()
    
     sets.aftercast.Idle[0]={
         head="Mummu Bonnet +1",
-        body="Mummu Jacket +1",
+        body="Meghanada Cuirie +2",
         hands="Mummu Wrists +1",
-        legs="Mummu Kecks +2",
-        feet="Mummu Gamash. +2",
+        legs="Meghanada Chausses +2",
+        feet="Meghanada Jambeaux +1",
         neck="Commodore Charm",
         waist="Dynamic Belt",
         left_ear="Mache Earring",
